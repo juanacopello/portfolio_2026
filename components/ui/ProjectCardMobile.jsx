@@ -22,19 +22,19 @@ export default function ProjectCardMobile({ project }) {
         {/* Text wrapper stays full width */}
         <div className="w-full mt-3 md:mt-4">
           {/* Increased mobile text size from 13px to 16px */}
-          <h4 className="text-[16px] md:text-[16px] font-sans-serif font-light text-black line-clamp-2 leading-[1.2] md:leading-[1.1]">
+          <h4 className="text-[15px] md:text-[15px] font-sans-serif font-light text-black line-clamp-2 leading-[1.2] md:leading-[1.1]">
             {project.title}
           </h4>
           
           {hasExplanation ? (
             /* Increased mobile text size from 10px to 12px */
-            <div className="mt-2 text-[12px] md:text-[12px] font-sans-serif font-semibold uppercase text-[var(--text-title)] flex gap-1">
+            <div className="mt-1.5 md:mt-1 text-[12px] md:text-[12px] font-sans-serif font-semibold uppercase text-[var(--text-title)] flex items-center gap-1">
               <span>How we did it</span>
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </div>
           ) : (
             /* Increased mobile text size from 10px to 12px */
-            <div className="mt-2 text-[12px] md:text-[12px] font-sans-serif font-semibold uppercase text-[var(--text-title)] flex gap-1">
+            <div className="mt-1.5 md:mt-1 text-[12px] md:text-[12px] font-sans-serif font-semibold uppercase text-[var(--text-title)] flex items-center gap-1">
               <span>Go to article</span>
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </div>

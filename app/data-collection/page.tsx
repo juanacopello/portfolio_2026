@@ -12,7 +12,7 @@ export default function ProjectDetail() {
             {/* --- BACK BUTTON --- */}
             <Link 
               href="/" 
-              className="group flex items-center gap-2 font-sans-serif text-xs font-semibold uppercase tracking-normal text-black no-underline hover:opacity-70 transition-all"
+              className="group flex items-center gap-2 font-sans-serif text-xs font-light uppercase tracking-normal text-black no-underline hover:opacity-70 transition-all"
             >
               <span className="transition-transform group-hover:-translate-x-1">
                 ←
@@ -51,7 +51,7 @@ export default function ProjectDetail() {
           {/* Project Details / Narrative */}
           <section className=" space-y-8">
             <div className="space-y-4">
-              <h2 className="text-md uppercase font-bold font-sans-serif">Concept</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif">Concept</h2>
               <p className="text-md text-black/90 leading-tight font-sans-serif font-light">
                 Here you can explain the deeper technical challenges or the reporting 
                 process. Since this section is 9 columns wide, your text has room to breathe.
@@ -68,7 +68,7 @@ export default function ProjectDetail() {
             </div>
 
             <div className="space-y-4">
-              <h2 className="text-md uppercase font-bold font-sans-serif">Outcome</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif">Outcome</h2>
               <p className="text-md text-black/90 leading-tight font-sans-serif font-light">
                 Describe the results of the project. This part will keep scrolling 
                 while the sidebar on the left stays right where it is.

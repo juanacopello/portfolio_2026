@@ -19,9 +19,9 @@
 
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  /* --font-sans: var(--font-geist-sans); */
+  /* --color-background: var(--background);
+  --color-foreground: var(--foreground); */
+  --font-sans-serif: var(--font-geist-mono);
   /* --font-mono: var(--font-geist-mono); */
 }
 
@@ -121,7 +121,8 @@
   --tertiary-color: var(--tertiary-color);
   --col-white: var(--color-white);
   --font-serif: "Noto Serif Display", serif;
-  --font-sans-serif: "DM Sans Variable", sans-serif;
+  --font-sans-serif-2: "DM Sans Variable", sans-serif;
+  /* --font-sans-serif: var(--font-geist-mono); */
 }
 
 body {
