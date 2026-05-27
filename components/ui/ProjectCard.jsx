@@ -1,44 +1,41 @@
-// components/ProjectCard.jsx
-
 export default function ProjectCard({ project }) {
-  const hasExplanation = project.explanation === true; 
+  const hasExplanation = project.explanation === true;
+
   return (
-    <article className="group relative col-span-3">
+    <article className="group relative col-span-1 lg:col-span-4">
       <a
         href={project.link}
-        target={project.explanation !== true ? "_self" : "_blank"}
-        rel="noopener noreferrer"
-        className="block"
+        target={hasExplanation ? "_self" : "_blank"}
+        rel={hasExplanation ? undefined : "noopener noreferrer"}
+        className="block transition-opacity hover:opacity-70"
       >
-        {/* Image Container */}
-        <div className="relative group overflow-hidden">
-          {/* The Image */}
+        <div className="overflow-hidden">
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-auto object-cover"
           />
-
-          {/* THE BORDER: This div sits exactly on top of the image */}
-          <div className="absolute inset-0 border-0 border-black transition-all duration-300 ease-in-out group-hover:border-[2px] group-hover:border-[#3c55ab] pointer-events-none"></div>
         </div>
-
-        {/* Content Container */}
-        <div className="mt-4 px-1">
-          <h4 className="text-[1rem] font-light text-black line-clamp-2 font-grotesk leading-[1.1]">
+        <div className="w-full mt-3 md:mt-4">
+          {/* Increased mobile text from 13px to 15px */}
+          <h4 className="text-[15px] md:text-[16px] font-sans-serif font-light text-black line-clamp-2 leading-[1.2] md:leading-[1.1]">
             {project.title}
           </h4>
-          <p className="mt-2 text-[0.75rem] font-light uppercase font-grotesk text-black">
-            {project.published}
-          </p>
+          
+          {hasExplanation ? (
+            /* Increased mobile text from 10px to 12px */
+            <div className="mt-1.5 md:mt-1 text-[12px] md:text-[12px] font-sans-serif font-semibold uppercase text-[var(--text-title)] flex items-center gap-1">
+              <span>How we did it</span>
+              <span className="transition-transform group-hover:translate-x-1">→</span>
+            </div>
+          ) : (
+            /* Increased mobile text from 10px to 12px */
+            <div className="mt-1.5 md:mt-1 text-[12px] md:text-[12px] font-sans-serif font-semibold uppercase text-[var(--text-title)] flex items-center gap-1">
+              <span>Go to article</span>
+              <span className="transition-transform group-hover:translate-x-1">→</span>
+            </div>
+          )}
         </div>
-
-{/* If hasExplanation is true, the div is rendered */}
-      {hasExplanation && (
-        <div className="mt-8 text-[12px] font-light uppercase font-grotesk text-black">
-          Behind the scenes: Click to read more
-        </div>
-      )}
       </a>
     </article>
   );

@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function ProjectDetail() {
   return (
     <div className="mx-auto max-w-[1400px] px-6">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8">
         
         {/* ASIDE: 3 columns */}
         <aside className="md:col-span-3">
@@ -12,7 +12,7 @@ export default function ProjectDetail() {
             {/* --- BACK BUTTON --- */}
             <Link 
               href="/" 
-              className="group flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black no-underline hover:opacity-70 transition-all"
+              className="group flex items-center gap-2 font-sans-serif text-xs font-semibold uppercase tracking-normal text-black no-underline hover:opacity-70 transition-all"
             >
               <span className="transition-transform group-hover:-translate-x-1">
                 ←
@@ -24,7 +24,7 @@ export default function ProjectDetail() {
               <h1 className="text-2xl font-bold uppercase leading-tight">
                 The Data Collection Project
               </h1>
-              <p className="text-sm text-gray-500 mt-2">European Council on Foreign Relations</p>
+              <p className="text-sm text-gray-500 mt-2">La Nación</p>
             </div>
 
             {/* Rest of your sidebar content... */}
@@ -49,10 +49,10 @@ export default function ProjectDetail() {
           </section>
 
           {/* Project Details / Narrative */}
-          <section className="max-w-3xl space-y-8">
+          <section className=" space-y-8">
             <div className="space-y-4">
-              <h2 className="text-xl font-medium">Concept</h2>
-              <p className="text-lg font-light text-gray-700 leading-relaxed">
+              <h2 className="text-md uppercase font-bold font-sans-serif">Concept</h2>
+              <p className="text-md text-black/90 leading-tight font-sans-serif font-light">
                 Here you can explain the deeper technical challenges or the reporting 
                 process. Since this section is 9 columns wide, your text has room to breathe.
               </p>
@@ -68,12 +68,21 @@ export default function ProjectDetail() {
             </div>
 
             <div className="space-y-4">
-              <h2 className="text-xl font-medium">Outcome</h2>
-              <p className="text-lg font-light text-gray-700 leading-relaxed">
+              <h2 className="text-md uppercase font-bold font-sans-serif">Outcome</h2>
+              <p className="text-md text-black/90 leading-tight font-sans-serif font-light">
                 Describe the results of the project. This part will keep scrolling 
                 while the sidebar on the left stays right where it is.
               </p>
             </div>
+
+            <div className="grid grid-cols-2 gap-4">
+      <figure className="aspect-square bg-gray-100">
+        <img src="/image1.jpg" className="w-full h-full object-cover" alt="Detail 1" />
+      </figure>
+      <figure className="aspect-square bg-gray-100">
+        <img src="/image2.jpg" className="w-full h-full object-cover" alt="Detail 2" />
+      </figure>
+    </div>
           </section>
 
           {/* Footer space to allow scrolling past the sidebar */}

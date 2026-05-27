@@ -1,9 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fefbf4;
   --foreground: #171717;
+  --primary-color: #416bb5;
+  --bg-color: #fefbf4;
+  --bg-color-2: #f0ede8;
+  --secondary-color: #bbd5f0;
+  --text-title: #cf1031;
+  --tertiary-color: #8d7fba;
+  --color-white: #fffefb;
+  ;
 }
+
+* {
+  cursor: none;
+}
+
 
 @theme inline {
   --color-background: var(--background);
@@ -21,47 +34,108 @@
 
 
 @font-face {
-    font-family: 'Lay Grotesk';
-    src: url('/fonts/LayGrotesk-Trial-Regular.otf') format('opentype');
+  font-family: 'IBM Plex Sans';
+  src: url('/fonts/IBMPlexSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  /* Default */
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('/fonts/IBMPlexSans-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  /* Fixed from 'light' to 'normal' */
+  font-stretch: normal;
+  /* Default */
+}
+
+@font-face {
+  font-family: 'lora';
+  src: url(/public/fonts/serif-2/Lora-Regular.otf) format('opentype');
     font-weight: 400;
-    font-style: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Lay Grotesk';
-    src: url('/fonts/LayGrotesk-Trial-Medium.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'Nimbus Sans', sans-serif;
+  src: url('/public/fonts/sans-serif-4/NimbusSanL-Reg.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  /* Tells the browser this is fully compressed */
 }
 
 @font-face {
-    font-family: 'Lay Grotesk';
-    src: url('/fonts/LayGrotesk-Trial-Semibold.otf') format('opentype');
-    font-weight: 600;
-    font-style: normal;
+  font-family: 'Neue Haas Display', sans-serif;
+  src: url('/public/fonts/sans-serif-5/NeueHaasDisplayRoman.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  /* Tells the browser this is fully compressed */
+}
+
+
+@font-face {
+  font-family: "Noto Serif Display", serif;
+  src: url('/fonts/serif/NotoSerifDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+
 }
 
 @font-face {
-    font-family: 'Lay Grotesk';
-    src: url('/fonts/LayGrotesk-Trial-Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal; /* Fixed from 'bold' */
+  font-family: "Noto Serif Display", serif;
+  src: url('/fonts/serif/NotoSerifDisplay-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: light;
+  font-stretch: normal;
 }
 
 @font-face {
-    font-family: 'Lay Grotesk';
-    src: url('/fonts/LayGrotesk-Trial-Black.otf') format('opentype');
-    font-weight: 800;
-    font-style: normal;
+  font-family: "Noto Serif Display", serif;
+  src: url('/fonts/serif/NotoSerifDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: medium;
+  font-stretch: normal;
+}
+
+/* app/globals.css */
+
+/* app/globals.css */
+
+@font-face {
+  font-family: 'DM Sans Variable';
+  src: url('/public/fonts/sans-serif-6/DMSans-VariableFont.ttf') format('truetype');   
+  font-weight: 100 900; /* CRUCIAL: Enables the variable weight range */
+  font-style: normal;
+  font-display: swap;
 }
 
 @theme {
-  --font-grotesk: "Lay Grotesk", ui-sans-serif, system-ui;
+  --primary-color: var(--primary-color);
+  --bg-color: var(--bg-color);
+  --secondary-color: var(--secondary-color);
+  --text-title: var(--text-title);
+  --tertiary-color: var(--tertiary-color);
+  --col-white: var(--color-white);
+  --font-serif: "Noto Serif Display", serif;
+  --font-sans-serif: "DM Sans Variable", sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-grotesk);
-  font-weight: 400;
+
+}
+
+.font-condensed {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-stretch: condensed;
+}
+
+.font-semi-condensed {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-stretch: semi-condensed;
 }
