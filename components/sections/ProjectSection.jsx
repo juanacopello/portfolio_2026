@@ -5,7 +5,7 @@ import { projectData } from '@/data/projects';
 export default function ProjectSection() {
   return (
     <section id="projects" className="bg-[var(--bg-color)]">
-      <h3 className='font-sans-serif-2 px-12 py-5 text-[20px] font-bold border border-black/70 uppercase'>Projects at La Nación</h3>
+      <h3 className='font-sans-serif-2 px-12 py-5 text-[20px] font-bold border-t border-b border-black/70 uppercase text-center md:text-left'>Projects at La Nación</h3>
       <div className="mx-12 mx-5 px-1 pt-[2vh] my-10">
         {/* <h3>La Nacion</h3>
         <p className="text-[var(--text-body)] font-sans-serif font-normal">

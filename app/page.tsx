@@ -9,8 +9,8 @@ export default function Home() {
     <div className="bg-[var(--bg-color)] dark:bg-black">
 
       <div className="h-screen flex flex-col">
-  <header className="w-full px-6 md:px-18 py-5 items-center grid md:grid-cols-12 gap-8 border-b border-black/70 bg-[#cf1031e6]">
-    <h1 className="col-span-6 md:col-span-4 text-[40px] font-sans-serif-2 text-[#ffffff] font-thin tracking-tight">Juana Copello</h1>
+  <header className="w-full px-6 md:px-18 py-5 items-center grid md:grid-cols-12 gap-8 border-b border-black/70 bg-[#1c1c1c]">
+    <h1 className="col-span-6 md:col-span-4 text-[40px] font-sans-serif-2 text-[#ffffff] font-thin tracking-tight text-center md:text-left">Juana Copello</h1>
   </header>
 
   <section className="flex-1" style={{ backgroundColor: 'var(--bg-color)' }}>
