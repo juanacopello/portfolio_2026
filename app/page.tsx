@@ -6,14 +6,14 @@ import Footer from '@/components/sections/Footer';
 
 export default function Home() {
   return (
-    <div className="bg-[#fefbf4] dark:bg-black">
+    <div className="bg-[var(--bg-color)] dark:bg-black">
 
-      <div className="h-screen flex flex-col border-b border-black/70">
+      <div className="h-screen flex flex-col">
   <header className="w-full px-6 md:px-18 py-5 items-center grid md:grid-cols-12 gap-8 border-b border-black/70 bg-[#cf1031e6]">
     <h1 className="col-span-6 md:col-span-4 text-[40px] font-sans-serif-2 text-[#ffffff] font-thin tracking-tight">Juana Copello</h1>
   </header>
 
-  <section className="flex-1" style={{ backgroundColor: '#faf1da' }}>
+  <section className="flex-1" style={{ backgroundColor: 'var(--bg-color)' }}>
     <div className="max-w-[1500px] px-6 py-10 md:py-20 md:px-18 mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-x-[5rem]">
 
@@ -30,7 +30,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="hidden md:block md:col-span-4">
+        {/* <div className="hidden md:block md:col-span-4">
           <div className="aspect-[3/4] overflow-hidden bg-gray-100">
             <img
               src="/images/your-image.jpg"
@@ -38,7 +38,7 @@ export default function Home() {
               className="w-full h-full object-cover"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   </section>

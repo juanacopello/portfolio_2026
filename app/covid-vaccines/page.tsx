@@ -101,25 +101,7 @@ export default function ProjectDetail() {
               </p>
             </div>
 
-            <div className="overflow-hidden col-span-4 md:col-span-6">
-              <video
-                src="/images/vacunas/inactivado_v3.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-auto object-cover mix-blend-multiply"
-              />
-            </div>
-
-            <div className="space-y-4 col-span-4 md:col-span-6">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">My role</h2>
-              <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
-                My task in this project was to investigate about how vaccines worked, which were the latest vaccines developments, and how each technology platform worked in order to cause immunization. When we began searching for information, in March 2020, there was still little data available about them, and it was not consolidated in one place. We had to look through the World Health Organization, journalistic articles, and press documents issued by the laboratories. In order to build the visual explanation of the vaccine platforms, I reached out to scientists, infectologists and immunologists so I could have an integral perspective of the vaccination and immunization process.
-              </p>
-            </div>
-
-            <div className="col-span-4 md:col-span-8 grid grid-cols-3 md:grid-cols-8 gap-[15px] md:gap-[30px] my-[20px] md:my-[40px]">
+                <div className="col-span-4 md:col-span-8 grid grid-cols-3 md:grid-cols-8 gap-[15px] md:gap-[30px] my-[20px] md:my-[40px]">
               <div className="overflow-hidden col-span-1 md:col-span-2">
                 <img src="/images/vacunas/como-funciona-1.png" className="w-full h-auto object-cover" />
               </div>
@@ -130,6 +112,26 @@ export default function ProjectDetail() {
                 <img src="/images/vacunas/como-funciona-3.png" className="w-full h-auto object-cover" />
               </div>
             </div>
+
+            {/* <div className="overflow-hidden col-span-4 md:col-span-6">
+              <video
+                src="/images/vacunas/inactivado_v3.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-auto object-cover mix-blend-multiply"
+              />
+            </div> */}
+
+            <div className="space-y-4 col-span-4 md:col-span-6">
+              <h2 className="text-lg uppercase font-bold font-sans-serif">My role</h2>
+              <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
+                My task in this project was to investigate about how vaccines worked, which were the latest vaccines developments, and how each technology platform worked in order to cause immunization. When we began searching for information, in March 2020, there was still little data available about them, and it was not consolidated in one place. We had to look through the World Health Organization, journalistic articles, and press documents issued by the laboratories. In order to build the visual explanation of the vaccine platforms, I reached out to scientists, infectologists and immunologists so I could have an integral perspective of the vaccination and immunization process.
+              </p>
+            </div>
+
+        
 
           </section>
         </main>
