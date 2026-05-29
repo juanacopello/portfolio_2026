@@ -114,14 +114,15 @@ export default function ProjectDetail() {
             </div>
 
             {/* <div className="overflow-hidden col-span-4 md:col-span-6">
-              <video
+              {/* <video
                 src="/images/vacunas/inactivado_v3.mp4"
                 autoPlay
                 muted
                 loop
                 playsInline
                 className="w-full h-auto object-cover mix-blend-multiply"
-              />
+              /> *
+              <img src="/images/vacunas/vacunas.gif" alt="vaccines_gif" className="w-full h-auto object-cover mix-blend-multiply"></img>
             </div> */}
 
             <div className="space-y-4 col-span-4 md:col-span-6">
