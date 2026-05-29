@@ -7,7 +7,7 @@ export default function ProjectDetail() {
 
         {/* ASIDE: 4 columns */}
         <aside className="md:col-span-4 md:border-r border-black/70">
-          <div className="md:sticky md:top-10 py-6 md:py-10 space-y-6 md:space-y-8 px-4">
+          <div className="md:sticky md:top-10 py-6 md:py-10 space-y-6 md:space-y-8 px-6">
 
             {/* --- BACK BUTTON --- */}
             <Link
@@ -19,7 +19,7 @@ export default function ProjectDetail() {
             </Link>
 
             <div>
-              <h1 className="text-xl md:text-2xl leading-[1.2] font-sans-serif-2 font-semibold tracking-tight text-black/90">
+              <h1 className="text-xl md:text-2xl leading-none font-sans-serif-2 font-semibold tracking-tight text-black/90">
                 Do You know How Much Gasoline and Milk Cost? Test Your Notion of Prices in times of Rampant Inflation
               </h1>
               <p className="text-[14px] md:text-[14px] text-[#484848] font-sans-serif uppercase">La Nación</p>

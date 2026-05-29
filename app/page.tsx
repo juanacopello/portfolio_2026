@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ProjectSection from '@/components/sections/WorkProjectSection';
-import ResumeSection from '@/components/sections/ResumeSection';
+import StudentProjectSection from '@/components/sections/StudentProjectSection';
 import Footer from '@/components/sections/Footer';
 
 
@@ -48,11 +48,8 @@ export default function Home() {
 
      
       <main className="w-full">
-
         {/* Section 2: Projects or About */}
-
-
-
+        <StudentProjectSection />
         <ProjectSection />
         <Footer />
       </main>
