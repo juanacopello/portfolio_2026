@@ -20,7 +20,7 @@ export default function ProjectDetail() {
 
             <div>
               <h1 className="text-xl md:text-2xl leading-none font-sans-serif-2 font-semibold tracking-tight text-black/90">
-                Sami, a web application for therapists working with children with neurodevelopmental disorders
+                Sami, a web application for therapists working with children with NDDs
               </h1>
               <p className="text-[14px] md:text-[14px] text-[#484848] font-sans-serif uppercase">Politecnico di Milano</p>
             </div>
