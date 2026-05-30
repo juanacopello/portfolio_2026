@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ProjectSection from '@/components/sections/WorkProjectSection';
+import ProjectSection from '@/components/sections/ProjectSection';
 import ResumeSection from '@/components/sections/ResumeSection';
 import Footer from '@/components/sections/Footer';
 
