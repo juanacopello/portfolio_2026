@@ -27,17 +27,17 @@ export default function ProjectDetail() {
 
             <div className="space-y-4">
               <div>
-                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase">Role</h4>
+                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase text-[#0063C5]">Role</h4>
                 <p className="text-sm font-sans-serif font-light">Web Development, Data Visualization</p>
               </div>
 
               <div>
-                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase">Publication Date</h4>
+                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase text-[#0063C5]">Publication Date</h4>
                 <p className="text-sm font-sans-serif font-light">18/10/2024</p>
               </div>
 
               <div>
-                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase">Co-Authors</h4>
+                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase text-[#0063C5]">Co-Authors</h4>
                 <p className="text-sm font-sans-serif font-light">Pablo Loscri (Visual Editor), Martín Rodríguez Yebra (Politics Editor), Gastón Balatti (Frontend Developer) and Delfina Celichini (Politics Reporter)</p>
               </div>
 
@@ -64,7 +64,7 @@ export default function ProjectDetail() {
 
             {/* Context */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">Context</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">Context</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 During Javier Milei's first year in office, he took measures and sent disruptive bills that necessarily required the approval of national legislators. For each of the sessions, Milei's officials negotiated law by law with the provinces' governors, which translated into the votes of the legislators over which these political leaders could influence. Two reporters from the Politics section carried out an analysis of the votes of the legislators who answer to these governors in the key bills the government needed to carry out the reforms. In this way, they sought to determine which of these leaders were allied with the libertarian government, even when they said they were not.
               </p>
@@ -72,7 +72,7 @@ export default function ProjectDetail() {
 
             {/* Structure */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">Structure</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">Structure</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 We grouped the governors based on their closeness to the national government's ideology. We took into account how the legislators from each district's official party voted in Congress the bills proposed by the national government.
               </p>
@@ -88,7 +88,7 @@ export default function ProjectDetail() {
 
             {/* Visualizing legislators' votes */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">visualizing legislators' votes</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">visualizing legislators' votes</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 The visualization is a waffle chart, where each of the squares represent the vote of the legislator. The color and icon represent how they voted on the key bills Javier Milei needed to pass in Congress. The visualization aimed to show on a first glance how each of the governor's legislators voted in Congress, revealing secret strategies and alliances.
               </p>
@@ -109,7 +109,7 @@ export default function ProjectDetail() {
 
             {/* Interactivity */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">Interactivity</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">Interactivity</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 Users can hover over each square in the waffle chart to view detailed information about the legislator's voting record. This approach works effectively on mobile devices, where we had to hide certain information to optimize the user experience. In such cases, we included a call-to-action text that guides users to access the hidden details by asking them to click on the square. The tooltip shows the legislator's name, the name of the bill they voted, and what was their vote about it.
               </p>
@@ -117,7 +117,7 @@ export default function ProjectDetail() {
 
             {/* My role */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">My role</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">My role</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 We divided the task with another frontend developer, as we had three days to produce the entire project. I developed the waffle charts using Svelte and D3 for the color scales. I also collaborated in developing the layout and styles of the application.
               </p>

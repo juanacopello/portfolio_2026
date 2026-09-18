@@ -1,41 +1,104 @@
 import ProjectCard from '@/components/ui/ProjectCard';
 import ProjectCardMobile from '@/components/ui/ProjectCardMobile';
 import { projectLaNacionData } from '@/data/projectsLaNacion';
+import Link from 'next/link';
+
 
 export default function ProjectSection() {
   return (
-    <section id="projects" className="bg-[var(--bg-color)]">
-      <h3 className='font-sans-serif-2 px-12 py-5 text-[20px] font-bold border-t border-b border-black/70 uppercase text-center md:text-left'>Projects at La Nación</h3>
-      <div className="mx-12 mx-5 px-1 pt-[2vh] my-10">
-        {/* <h3>La Nacion</h3>
-        <p className="text-[var(--text-body)] font-sans-serif font-normal">
-          From 2019 until 2025 I investigated, wrote, coded and designed for the Visual Storytelling & Graphics Team at La Nación, one of the largest media outlets in Argentina.
-        </p> */}
-        <div className="mb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-x-[5rem] mb-20 gap-y-10 mt-[5vh]">
-            <ProjectCard project={projectLaNacionData[0]} />
-            <ProjectCard project={projectLaNacionData[1]} />
-            <ProjectCard project={projectLaNacionData[2]} />
+    <section className="p-6 max-w-[1400px] mx-auto">
+      <h2 className="font-sans-serif text-[35px] tracking-tighter font-[400] border-b-2">Case Studies</h2>
+      <div className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-12 grid-flow-dense gap-x-6 gap-y-5 auto-rows-[220px] mt-10">
+
+    {/* Weaving Truths (Cols 1-6, Rows 1-2) */}
+       <Link
+          href="/heat-islands"
+          className="md:col-span-3 lg:col-span-6 group block"
+        >
+          <div className="w-full aspect-[16/10] overflow-hidden bg-zinc-200 mb-3">
+            <img
+              src="/miniaturas/transporte.png"
+              alt="Weaving Truths"
+              className="w-full h-full object-cover"
+            />
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-12 gap-x-[5rem] mb-20 gap-y-10">
-            <ProjectCardMobile project={projectLaNacionData[3]} />
-            <ProjectCardMobile project={projectLaNacionData[4]} />
-            <ProjectCardMobile project={projectLaNacionData[11]} />
+          <div>
+            <p className="text-[15px] tracking-tight font-sans-serif font-[100] group-hover:underline">
+              Weaving Truths
+            </p>
+            <h3 className="text-[30px] md:text-2xl font-sans-serif leading-tight font-[350]">
+              A game about xxxx
+            </h3>
           </div>
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-x-[5rem] mb-20 gap-y-10">
-            <ProjectCard project={projectLaNacionData[5]} />
-            <ProjectCard project={projectLaNacionData[6]} />
+        </Link>
+
+        
+
+        {/* Heat Islands (Cols 1-4, Rows 3-4) */}
+      <Link
+          href="/heat-islands"
+          className="md:col-span-3 lg:col-span-6 group block"
+        >
+          <div className="w-full aspect-[16/10] overflow-hidden bg-zinc-200 mb-3">
+            <img
+              src="/miniaturas/transporte.png"
+              alt="Weaving Truths"
+              className="w-full h-full object-cover"
+            />
           </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-x-[5rem] mb-20 gap-y-10">
-            <ProjectCard project={projectLaNacionData[7]} />
-            <ProjectCard project={projectLaNacionData[8]} />
+          <div>
+            <p className="text-[15px] tracking-tight font-sans-serif font-[100] group-hover:underline">
+              Weaving Truths
+            </p>
+            <h3 className="text-[30px] md:text-2xl font-sans-serif leading-tight font-[350]">
+              A game about xxxx
+            </h3>
           </div>
-            <div className="grid grid-cols-2 lg:grid-cols-12 gap-x-[5rem] mb-20">
-            <ProjectCardMobile project={projectLaNacionData[9]} />
-            <ProjectCardMobile project={projectLaNacionData[10]} />
+        </Link>
+
+        {/* Inflation Game (Cols 5-7, Rows 3-4) */}
+          <Link
+          href="/heat-islands"
+          className="md:col-span-3 lg:col-span-6 group block"
+        >
+          <div className="w-full aspect-[16/10] overflow-hidden bg-zinc-200 mb-3">
+            <img
+              src="/miniaturas/transporte.png"
+              alt="Weaving Truths"
+              className="w-full h-full object-cover"
+            />
           </div>
-          
-        </div>
+          <div>
+            <p className="text-[15px] tracking-tight font-sans-serif font-[100] group-hover:underline">
+              Weaving Truths
+            </p>
+            <h3 className="text-[30px] md:text-2xl font-sans-serif leading-tight font-[350]">
+              A game about xxxx
+            </h3>
+          </div>
+        </Link>
+
+        {/* Covid-19 Vaccines (Cols 1-6, Rows 5 & 6) */}
+          <Link
+          href="/heat-islands"
+          className="md:col-span-3 lg:col-span-6 group block"
+        >
+          <div className="w-full aspect-[16/10] overflow-hidden bg-zinc-200 mb-3">
+            <img
+              src="/miniaturas/transporte.png"
+              alt="Weaving Truths"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <p className="text-[15px] tracking-tight font-sans-serif font-[100] group-hover:underline">
+              Weaving Truths
+            </p>
+            <h3 className="text-[30px] md:text-2xl font-sans-serif leading-tight font-[350]">
+              A game about xxxx
+            </h3>
+          </div>
+        </Link>
       </div>
     </section>
   );

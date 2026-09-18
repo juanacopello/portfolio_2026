@@ -27,17 +27,17 @@ export default function ProjectDetail() {
 
             <div className="space-y-4">
               <div>
-                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase">Lesson</h4>
+                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase text-[#0063C5]">Lesson</h4>
                 <p className="text-sm font-sans-serif font-light">Advanced User Interfaces</p>
               </div>
 
               <div className='leading-none'>
-                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase">Publication Date</h4>
+                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase text-[#0063C5]">Publication Date</h4>
                 <p className="text-sm font-sans-serif font-light">Year 1. Semester 1. <br />(Nov. 2025 - Feb. 2026)</p>
               </div>
 
               <div>
-                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase">Co-Authors</h4>
+                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase text-[#0063C5]">Co-Authors</h4>
                 <p className="text-sm font-sans-serif font-light">Claudio Costantini, Miguel Sierra, and Emanuele Turbanti</p>
               </div>
 
@@ -73,7 +73,7 @@ export default function ProjectDetail() {
 
             {/* Context */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">Context</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">Context</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 Children with neurodevelopmental disorders (NDDs) often experience difficulties in recognizing, interpreting, and expressing emotions, which can hinder social interaction and emotional development. Therapists working with these children require tools that are not only engaging and accessible for the child, but also capable of providing structured feedback and measurable indicators of progress over time. Traditional therapeutic activities may lack personalization, adaptability, or systematic data collection, limiting their effectiveness and scalability.
               </p>
@@ -81,7 +81,7 @@ export default function ProjectDetail() {
 
             {/* Structure */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">Concept</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">Concept</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 This project proposes a web-based therapeutic support application designed specifically for therapists
                 and children with NDDs. The primary requirement of the system is to support emotional learning
@@ -101,7 +101,7 @@ export default function ProjectDetail() {
 
             {/* Visualizing legislators' votes */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">User Experience</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">User Experience</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 The application is centered around a guided storytelling
                 approach. During a session, the child interacts with an avatar that tells an automatically generated
@@ -129,7 +129,7 @@ export default function ProjectDetail() {
 
             {/* Interactivity */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">Technologies Used</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">Technologies Used</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 From a technological standpoint, the system is built using a MERN stack architecture, ensuring
                 modularity and scalability. Speech Emotion Recognition (SER) is handled by a dedicated Python
@@ -147,7 +147,7 @@ export default function ProjectDetail() {
 
             {/* My role */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">Value Proposition</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">Value Proposition</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 This solution combines emotional assessment,
                 adaptive content generation, and progress tracking into a single integrated platform. For children, the
@@ -161,7 +161,7 @@ export default function ProjectDetail() {
 
              {/* My role */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">My Role</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">My Role</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 This solution combines emotional assessment,
                 adaptive content generation, and progress tracking into a single integrated platform. For children, the

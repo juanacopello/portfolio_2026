@@ -27,17 +27,17 @@ export default function ProjectDetail() {
 
             <div className="space-y-4">
               <div>
-                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase">Role</h4>
+                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase text-[#0063C5]">Role</h4>
                 <p className="text-sm font-sans-serif font-light">Web Development, Data Visualization</p>
               </div>
 
               <div>
-                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase">Publication Date</h4>
+                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase text-[#0063C5]">Publication Date</h4>
                 <p className="text-sm font-sans-serif font-light">07/09/2023</p>
               </div>
 
               <div>
-                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase">Co-Authors</h4>
+                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase text-[#0063C5]">Co-Authors</h4>
                 <p className="text-sm font-sans-serif font-light">Pablo Loscri, Florencia Abd (Visual Editors), Nicolás Cassese (Editor), Florencia Rodríguez Altube (Data Reporter), Gabriela Bouret, Sofía Weintraub, Bruno Soifer, Miguel Bevacqua (Data Analysts).</p>
               </div>
 
@@ -60,7 +60,7 @@ export default function ProjectDetail() {
 
             {/* Context */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">Context</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">Context</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 Until 2023, the vote in Argentina was concentrated in two fairly stable conglomerates with an evident class condition: the tendency of the population's poorer segments were towards Peronism and the richer ones towards Juntos por el Cambio. These two halves imploded on August 13, 2023, when the political scenario was divided into three thirds, with Javier Milei disrupting the political scene. After Javier Milei's surprise victory in the primary elections, La Nación set out to analyze the political and social phenomenon of this eccentric economist and extreme right-wing candidate. Who were his voters and what was their profile? To do so, we cross-referenced electoral data with several socioeconomic variables from the 2022 Argentine census to find if there were any relationships between them. The results of this analysis were revealing. While for the two traditional parties a relationship can be seen between the political vote and socioeconomic variables, the same logic is not reproduced for the far-right party. In other words, we discovered a transversality among Milei's voters. From this data-driven production, we were able to empirically verify a social phenomenon: the rise of Javier Milei as a political figure, who months later would be elected president.
               </p>
@@ -68,7 +68,7 @@ export default function ProjectDetail() {
 
             {/* Variables */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">Variables</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">Variables</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 The variables cross-referenced were the percentage of votes obtained in each department of the country by the political parties Unión por la Patria, Juntos por el Cambio and La Libertad Avanza (Milei's political party) in relation to the weighted average salary of the population, access to sewage, and access to internet, which were taken from the 2022 Census. We also analyzed the relationship between the winner in each district and access to the basic food basket (an official indicator that defines the poverty line, which is published every three months).
               </p>
@@ -80,7 +80,7 @@ export default function ProjectDetail() {
 
             {/* Structure */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">Structure</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">Structure</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 Each chart includes a general analysis to guide the reader through its interpretation, providing insights into the key trends and patterns. Additionally, we show the Pearson correlation value to quantify the strength and direction of the relationship between variables. While some of the charts do not show a correlation between variables, we decided to publish them anyway to show the diversity of Javier Milei's voters profile.
               </p>
@@ -101,7 +101,7 @@ export default function ProjectDetail() {
 
             {/* My role */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">My role</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">My role</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 I developed the interactive correlation charts, in which I used the Javascript libraries Observable Plot and D3, which loaded the CSV file with the data. The project provided an excellent opportunity to explore and test these Javascript libraries from a technical perspective.
               </p>
@@ -109,7 +109,7 @@ export default function ProjectDetail() {
 
             {/* Interactivity */}
             <div className="space-y-4 col-span-4 md:col-span-7">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">Interactivity</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">Interactivity</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 Some of the charts show a tooltip when the user hovers over each circle. We wanted to show additional data that gave the chart another layer of information. The tooltip shows the district's name, the percentage of votes the party got in that district and the value of the cross-referenced variable (in this case, access to basic food basket).
               </p>

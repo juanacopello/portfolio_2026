@@ -27,21 +27,21 @@ export default function ProjectDetail() {
 
             <div className="space-y-4">
               <div>
-                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase">Role</h4>
+                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase text-[#0063C5]">Role</h4>
                 <p className="text-sm font-sans-serif font-light">Web Development, Data Reporting</p>
               </div>
 
               <div>
-                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase">Publication Date</h4>
+                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase text-[#0063C5]">Publication Date</h4>
                 <p className="text-sm font-sans-serif font-light">07/09/2022</p>
               </div>
 
               <div>
-                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase">Co-Authors</h4>
+                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase text-[#0063C5]">Co-Authors</h4>
                 <p className="text-sm font-sans-serif font-light">Pablo Loscri (Visual Editor), Nicolás Cassese (Editor), and Melisa Reinhold (Economics Reporteer)</p>
               </div>
 
-              <button className="text-[var(--text-title)] border-3 border-[var(--text-title)] py-2 px-4 hover:bg-[var(--text-title)] hover:text-white transition-all cursor-pointer font-sans-serif font-bold text-[12px] uppercase mt-4">
+              <button className="text-[#0063C5] border-3 border-[#0063C5] py-2 px-4 hover:bg-[#0063C5] hover:text-white transition-all cursor-pointer font-sans-serif font-bold text-[12px] uppercase mt-4">
                 <a href="https://www.lanacion.com.ar/economia/sabes-cuanto-vale-la-leche-y-la-nafta-testea-tu-nocion-de-los-precios-en-tiempos-de-inflacion-nid07092022/" target="_blank" rel="noopener noreferrer">
                   View Project
                 </a>
@@ -60,7 +60,7 @@ export default function ProjectDetail() {
 
             {/* Context */}
             <div className="space-y-4 col-span-4 md:col-span-6">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">Context</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">Context</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 Over the past years, Argentina's main concern has been inflation. In 2022, the year in which this project was published, Argentina's accumulated annual inflation was 94,2%. This accelerated trend has not only impacted in Argentine's purchasing power, but also caused them to lose track of the real value of things. This phenomenon makes it impossible to know whether we are buying things expensive or cheap. To show how this phenomenon plays out, we published this quiz that asked our readers how much they thought a product or service was worth. Once answered, the application showed the real value and defined how close or far away the reader had been from that price.
               </p>
@@ -72,7 +72,7 @@ export default function ProjectDetail() {
 
             {/* My role */}
             <div className="space-y-4 col-span-4 md:col-span-6">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">My role</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">My role</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 I had a dual role in this project: firstly, I was in charge of finding the present and past prices of a given list of goods and services. For items such as gasoline, rent and milk, I checked in official websites. However, for other items like plane tickets we had to check with press officers. Simultaneously, I was in charge of the web development of the quiz, for which I used the Javascript framework Vue. The app loaded data from Google Spreadsheets, compared user answers to real values, provided feedback on accuracy, and included a bar chart of price trends with an analysis of the underlying factors.
               </p>
@@ -84,7 +84,7 @@ export default function ProjectDetail() {
 
             {/* User journey */}
             <div className="space-y-4 col-span-4 md:col-span-6">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">User journey</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">User journey</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 The user takes a guess with the price. The user needs to fill all input boxes in order to activate the green button that checks if the price is right. Once the user has completed the input field, the green button activates and becomes clickable. Once clicked, the app shows how close or far away the input price is from the real value of the product. Scrolling down, the user sees a bar chart showing the evolution of the price and an explanation behind the trend.
               </p>

@@ -1,58 +1,93 @@
+"use client"
 import Image from "next/image";
 import ProjectSection from '@/components/sections/WorkProjectSection';
-import StudentProjectSection from '@/components/sections/StudentProjectSection';
+import ListSection from '@/components/sections/ListSection'
 import Footer from '@/components/sections/Footer';
+import { useState, useEffect, useRef } from "react";
 
 
 export default function Home() {
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+  const targetRef = useRef<HTMLParagraphElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Triggers true as soon as the target hits the viewport
+        setIsHeaderVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.1, // Adjust if you want it triggered slightly earlier/later
+      }
+    );
+
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
   return (
-    <div className="bg-[var(--bg-color)] dark:bg-black">
+    <div className="bg-[var(--bg-color)]">
+    <header
+        className={`w-full px-6 md:px-18 py-5 items-center grid md:grid-cols-12 gap-8 z-40 fixed bg-[var(--bg-color)] transition-all duration-300 ${
+          isHeaderVisible
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-4 pointer-events-none"
+        }`}
+      >
+        <h1 className="col-span-6 md:col-span-4 text-[40px] font-sans-serif font-[500] text-[#000000] tracking-tighter text-center md:text-left">
+          Juana Copello
+        </h1>
+      </header>
 
-      <div className="h-screen flex flex-col">
-  <header className="w-full px-6 md:px-18 py-5 items-center grid md:grid-cols-12 gap-8 border-b border-black/70 bg-[#1c1c1c]">
-    <h1 className="col-span-6 md:col-span-4 text-[40px] font-sans-serif-2 text-[#ffffff] font-thin tracking-tight text-center md:text-left">Juana Copello</h1>
-  </header>
-
-  <section className="flex-1" style={{ backgroundColor: 'var(--bg-color)' }}>
-    <div className="max-w-[1500px] px-6 py-10 md:py-20 md:px-18 mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-x-[5rem]">
-  <div className="hidden md:block md:col-span-3">
-          <div className="aspect-[3/4] overflow-hidden bg-gray-100">
-            <img
-              src="/images/juana_3.png"
-              alt="me"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-        <div className="md:col-span-4 space-y-4">
-          <p className="text-[16px] md:text-[18px] leading-tight text-black/90 font-light font-sans-serif">
-            I am a freelance visual journalist and data visualization web developer from Argentina currently based in Italy, studying a Master in Science in Communication Design at Politecnico di Milano. Before that, I worked for five years at the Visual Storytelling and Graphics Team at La Nación in Buenos Aires. I was also an Adjunct Professor at the Universidad Torcuato Di Tella's Design School, where I taught introductory coding and data visualization classes.
-            <br /><br />I have provided data visualization consulting and development services to clients such as the European Council on Foreign Relations, the United Nations Population Fund, and Fundar. <br /><br />
-            This website is in English, but I am a native Spanish speaker and I also talk Italian.
-          </p>
-        </div>
-
-        {/* <div className="mt-4 md:mt-0 md:col-span-4 space-y-4">
-          <p className="text-[16px] md:text-[18px] leading-tight font-sans-serif font-light text-black/90">
-            I have provided data visualization consulting and development services to clients such as the European Council on Foreign Relations, the United Nations Population Fund, and Fundar. <br /><br />
-            This website is in English, but I am a native Spanish speaker and I also talk Italian.
-          </p>
-        </div> */}
-
-      
+      {/* Intro Screen */}
+      <div className="h-screen flex flex-col justify-center">
+        <p className="text-[16px] md:text-[51px] text-[#0057AE] font-serif leading-none tracking-normal mt-10 mb-10">
+          Hola!
+        </p>
+        <p className="text-[16px] md:text-[51px] text-[#0057AE] font-serif leading-none tracking-normal mt-10 mb-10">
+          I am Juana, and I specialize in not specializing
+        </p>
       </div>
-    </div>
-  </section>
-</div>
 
-     
+        <div ref={targetRef}>
+   {/* Bio Screen */}
+      <div className="min-h-screen flex flex-col">
+        <section className="flex-1" style={{ backgroundColor: "var(--bg-color)" }}>
+          <div className="max-w-[1500px] px-6 py-10 md:py-20 md:px-18 mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-20">
+              <div className="hidden md:block md:col-span-17">
+                {/* Target Element Attached to ref */}
+                <p
+                  className="text-[16px] md:text-[51px] text-[#0057AE] font-serif leading-none tracking-normal mt-10 mb-10"
+                >
+                  I am a designer made in Argentina but currently based in Italy, studying an MSc. in Communication Design at Politecnico di Milano. Before that, I worked for five years at La Nación (Buenos Aires) as a Visual Journalist and as an Adjunct Professor at Universidad Torcuato Di Tella.
+                </p>
+
+                <p className="text-[16px] md:text-[51px] text-[#0057AE] font-serif leading-none tracking-normal mt-10 mb-10">
+                  I have provided data visualization consulting and development services to clients such as the European Council on Foreign Relations, the United Nations Population Fund and Fundar (Argentina).
+                </p>
+
+                <p className="text-[16px] md:text-[51px] text-[#0057AE] font-serif leading-none tracking-normal mt-10 mb-10">
+                  This website is in English but I also speak Spanish and Italian, and I am learning German.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
       <main className="w-full">
         {/* Section 2: Projects or About */}
-        <StudentProjectSection />
+        {/* <StudentProjectSection /> */}
         <ProjectSection />
+        <ListSection />
         <Footer />
       </main>
+        </div>
+   
     </div>
   );
 }

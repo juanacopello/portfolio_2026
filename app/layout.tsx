@@ -28,7 +28,6 @@ export default function RootLayout({
       {/* Add the variable string here properly */}
       <body>
         {children}
-        <CustomCursor />  
       </body>
     </html>
   );

@@ -27,17 +27,17 @@ export default function ProjectDetail() {
 
             <div className="space-y-4">
               <div>
-                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase">Role</h4>
+                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase text-[#0063C5]">Role</h4>
                 <p className="text-sm font-sans-serif font-light">Data Reporting</p>
               </div>
 
               <div>
-                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase">Publication Date</h4>
+                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase text-[#0063C5]">Publication Date</h4>
                 <p className="text-sm font-sans-serif font-light">06/05/2021</p>
               </div>
 
               <div>
-                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase">Co-Authors</h4>
+                <h4 className="text-[12px] font-bold leading-[1.3] font-sans-serif uppercase text-[#0063C5]">Co-Authors</h4>
                 <p className="text-sm font-sans-serif font-light">Pablo Loscri (Visual Editor), Florencia Fernández Blanco (Editor), Giselle Ferro, Gabriel Podestá, Nicolás Rivera (Infographics Designers), Alejandra Bliffeld (UI Designer) and Fabiola Czubaj (Science Reporter)</p>
               </div>
 
@@ -59,7 +59,7 @@ export default function ProjectDetail() {
             </div>
 
             <div className="space-y-4 col-span-4 md:col-span-6">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">Context</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">Context</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 In 2020, shortly after the coronavirus pandemic was declared, we began researching vaccine developments that were under investigation for prevention. We wanted to report on the latest vaccine developments, how they worked and the stages of drug development. In June 2020 we published the first version of the report. In 2021, when the vaccination campaign started, we published a second version focusing this time on the vaccines developments.
               </p>
@@ -78,7 +78,7 @@ export default function ProjectDetail() {
             </div>
 
             <div className="space-y-4 col-span-4 md:col-span-6">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">Profiles</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">Profiles</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 We used the data on vaccines in development to create a profile for each one, including key details such as the involved laboratories and the clinical phase the vaccine was in. We also included storage temperature, efficacy results, and list price per dose. Since our audiences are mainly based in Argentina, we also included if it was going to be applied in the country. The color palette encodes the technology platform used: non-replicating viral vector (purple), mRNA (green) or inactivated viruses (red).
               </p>
@@ -95,7 +95,7 @@ export default function ProjectDetail() {
             </div>
 
             <div className="space-y-4 col-span-4 md:col-span-6">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">Scrollytelling narrative</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">Scrollytelling narrative</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 The latest vaccine developments provided an opportunity to showcase how each vaccine platform works. We enhanced traditional infographics by adding a layer of interactivity, using the scrollytelling technique. The narrative unfolds as users scroll, encouraging them to engage further with the story. Our goal was to adapt the infographic for the modern audiences, who primarily consume news through mobile devices.
               </p>
@@ -126,7 +126,7 @@ export default function ProjectDetail() {
             </div> */}
 
             <div className="space-y-4 col-span-4 md:col-span-6">
-              <h2 className="text-lg uppercase font-bold font-sans-serif">My role</h2>
+              <h2 className="text-lg uppercase font-bold font-sans-serif text-[#0063C5]">My role</h2>
               <p className="text-md text-black/90 leading-[1.3] font-sans-serif font-light">
                 My task in this project was to investigate about how vaccines worked, which were the latest vaccines developments, and how each technology platform worked in order to cause immunization. When we began searching for information, in March 2020, there was still little data available about them, and it was not consolidated in one place. We had to look through the World Health Organization, journalistic articles, and press documents issued by the laboratories. In order to build the visual explanation of the vaccine platforms, I reached out to scientists, infectologists and immunologists so I could have an integral perspective of the vaccination and immunization process.
               </p>
