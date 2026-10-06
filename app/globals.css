@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f9f7f7;
+  --background: #fffdfa;
   --foreground: #171717;
   --primary-color: #416bb5;
-  --bg-color: #f9f7f7;
+  --bg-color: ##fffdfa;
   --bg-color-2: #f0ede8;
   --secondary-color: #bbd5f0;
   --text-title: #cf1031;
@@ -34,11 +34,10 @@
 
 
 @font-face {
-  font-family: "MTC Quinnie", serif;
-  src: url('/public/fonts/serif/MTC_Quinnie.otf') format('opentype');
-  font-weight: 400;
-  font-style: italic;
-  font-stretch: normal;
+  font-family: "Libre Caslon Condensed", serif;
+  src: url('/fonts/serif/LibreCaslonCondensed.ttf') format('truetype');
+  font-weight: 100 900;
+ 
 
 }
 
@@ -48,8 +47,6 @@
   /* Specify the supported range using two numbers separated by a space */
   font-weight: 100 900;
   font-style: oblique 0deg 10deg;
-  /* Optional: if the font supports a slant axis */
-  font-display: swap;
 }
 
 @theme {
@@ -59,7 +56,8 @@
   --text-title: var(--text-title);
   --tertiary-color: var(--tertiary-color);
   --col-white: var(--color-white);
-  --font-serif: "MTC Quinnie", serif;
+/* Configurazione Font */
+  --font-serif: "Libre Caslon Condensed", serif;
   --font-sans-serif: "Archivo", sans-serif;
 }
 

@@ -1,12 +1,13 @@
 export default function Footer() {
   return (
-    <footer className="py-10 text-center bg-[#0057ae]" >
-      <p className="text-[#DCFE52] font-serif text-[50px] font-light">
-        Contact Me! 
+    <footer className="py-10 border border-t-[#0057ae]" >
+      <p className="font-sans-serif font-[300] text-[#0057ae] tracking-[-1px] text-[25px]">
+        Juana Copello
       </p>
-      <p>
-       juanacopello.info@gmail.com
-      </p>
+      <p className="font-sans-serif font-[300] text-[#0057ae] tracking-[-1px] text-[25px]">
+        Date.getFullYear()
+        </p>
+
     </footer>
   );
 }
