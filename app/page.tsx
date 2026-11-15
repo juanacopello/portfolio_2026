@@ -4,6 +4,7 @@ import ProjectSection from '@/components/sections/WorkProjectSection';
 import ListSection from '@/components/sections/ListSection'
 import Footer from '@/components/sections/Footer';
 import Contact from '@/components/sections/Contact';
+import Opening from '@/components/ui/Opening';
 import { useState, useEffect, useRef } from "react";
 
 
@@ -48,20 +49,44 @@ const [isHeaderVisible, setIsHeaderVisible] = useState(false);
         </div>
       </header>
 
-      {/* Intro Screen */}
-      <div className="h-screen">
-        <div 
-          ref={targetRef} 
-          className="h-[90%] flex flex-col justify-end mb-[50px]"
-        >
-          <p className="text-[16px] md:text-[51px] text-[#070A19] font-sans font-[500] leading-none tracking-tighter pl-6 md:pl-18">
-            Juana Copello
-          </p>
-          <p className="text-[16px] md:text-[51px] text-[#070A19] font-sans font-[500] leading-none tracking-tighter mb-10 pl-6 md:pl-18">
-            Designer &amp;  Developer
-          </p>
-        </div>
+      <main
+      style={{
+        position: "relative",
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "flex-end",
+        justifyContent: "start",
+        overflow: "hidden",
+      }}
+    >
+      {/* Background p5 Canvas */}
+      <Opening />
+
+      {/* Foreground Name Div */}
+      <div
+        style={{
+          position: "relative",
+          zIndex: 10,
+          color: "#ffffff",
+          height:"90%",
+          display:"flex",
+          flexDirection: "column",
+          justifyItems: "flex-end",
+          marginBottom: "50px",
+
+        }}
+      >
+         <p className="text-[16px] md:text-[51px] text-[#070A19] font-sans-serif font-[500] leading-none tracking-tighter pl-6 md:pl-18">
+          Juana Copello
+        </p>
+        <p className="text-[16px] md:text-[51px] text-[#070A19] font-sans-serif font-[500] leading-none tracking-tighter mb-10 pl-6 md:pl-18">
+          Designer &amp; Journalist
+        </p>
       </div>
+    </main>
+
+
+
 
       <div ref={targetRef}>
         {/* Bio Screen */}
@@ -72,19 +97,31 @@ const [isHeaderVisible, setIsHeaderVisible] = useState(false);
                 <div className="hidden md:block md:col-span-17">
                   {/* Target Element Attached to ref */}
 
-                  <p className="text-[16px] md:text-[45px] text-[#0057AE] font-serif leading-none tracking-[-2px] mt-10 mb-10">Hola!</p>
+                  <p className="text-[16px] md:text-[40px] text-[#0057AE] font-serif leading-none tracking-[-2px] mt-10 mb-10">Hola!</p>
                   <p
-                    className="text-[16px] md:text-[45px] text-[#0057AE] font-serif leading-none tracking-[-2px] mt-10 mb-10"
+                    className="text-[16px] md:text-[40px] text-[#0057AE] font-serif leading-none tracking-[-2px] mt-10 mb-10"
                   >
                      
-                    I am a designer from Argentina currently based in Italy, studying an MSc. in Communication Design at Politecnico di Milano. Before that, I worked as a visual journalist at La Nación (Buenos Aires) and as an adjunct professor at Universidad Torcuato Di Tella.
+                    I am a designer from Argentina currently based in Italy, studying an MSc. in Communication Design at Politecnico di Milano. Before that, I worked as a visual journalist at La Nación in Buenos Aires, where my work was recognized by organizations such as the Society for News Design and the Sociedad Interamericana de Prensa.
                   </p>
 
-                  <p className="text-[16px] md:text-[45px] text-[#0057AE] font-serif leading-none tracking-[-2px] mt-10 mb-10">
-                    I have provided data visualization work to clients such as the European Council on Foreign Relations, the United Nations Population Fund and Fundar (Argentina).
+                  <p className="text-[16px] md:text-[40px] text-[#0057AE] font-serif leading-none tracking-[-2px] mt-10 mb-10">
+                    I have provided data visualization work to clients such as the European Council on Foreign Relations, the United Nations Population Fund and Fundar (Argentina). 
+  You can read{" "}
+  <a
+    href="http://www.linkedin.com/in/juanacopello"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline hover:opacity-70 transition-opacity duration-200"
+  >
+    here
+  </a>{" "}
+  more about me and the work I did.
+
+                    
                   </p>
 
-                  <p className="text-[16px] md:text-[45px] text-[#0057AE] font-serif leading-none tracking-[-2px] mt-10 mb-10">
+                  <p className="text-[16px] md:text-[40px] text-[#0057AE] font-serif leading-none tracking-[-2px] mt-10 mb-10">
                     This website is in English but I also speak Spanish and Italian, and I am learning German.
                   </p>
                 </div>
@@ -97,8 +134,7 @@ const [isHeaderVisible, setIsHeaderVisible] = useState(false);
         <main className="w-full">
           <ProjectSection />
           <ListSection />
-          <Contact />
-
+          {/* <Contact /> */}
           <Footer />
         </main>
       </div>

@@ -12,7 +12,7 @@ export default function ProjectDetail() {
             <div className="md:col-span-5 space-y-2">
               <Link
                 href="/"
-                className="group inline-flex items-center gap-2 font-sans text-xs font-light uppercase tracking-normal text-black no-underline hover:opacity-70 transition-all"
+                className="group inline-flex items-center gap-2 font-sans-serif text-xs font-light uppercase tracking-normal text-black no-underline hover:opacity-70 transition-all"
               >
                 <span className="transition-transform group-hover:-translate-x-1">←</span>
                 Back to Home
@@ -59,17 +59,20 @@ export default function ProjectDetail() {
 
             {/* Paragraph: Row 2, Starts at Column 1 below the metadata */}
             <p className="col-span-1 md:col-start-1 md:col-span-6 text-base md:text-[20px] text-black/90 font-light leading-snug">
-              Weaving Truths is a two-player hybrid game developed in the context of a Design Studio at Politecnico di Milano. The game combines a physical board and a digital mobile environment, set in a fantasy world that is losing its balance. Players take on the roles of two characters and explore the world separately, each encountering different characters who offer fragmented perspectives on why things are falling apart.
+              <i>Weaving Truths</i> is a two-player hybrid game developed in the context of a Design Studio at Politecnico di Milano. The game combines a physical board and a digital mobile environment, set in a fantasy world that is losing its balance. Players take on the roles of two characters and explore the world separately, each encountering different characters who offer fragmented perspectives on why things are falling apart.
             </p>
+
+            <div className="col-span-1 md:col-span-7 w-full overflow-hidden">
+              <img
+                src="/images/weaving/overview.jpg"
+                alt="Weaving Truths Overview Image"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
           </div>
 
-          <div className="col-span-1 md:col-span-12 w-full overflow-hidden">
-            <img
-              src="/images/weaving/overview.jpg"
-              alt="Weaving Truths Overview Image"
-              className="w-full h-full object-cover"
-            />
-          </div>
+
         </section>
 
 
@@ -97,23 +100,22 @@ export default function ProjectDetail() {
 
         <section>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-12 md:gap-y-16">
-            <div className="col-span-1 grid-start-1 md:col-span-6 overflow-hidden rounded-lg bg-zinc-100 border border-black/10">
+            <div className="col-span-1 md:col-span-6 aspect-video overflow-hidden">
               <img
-                src=""
+                src="/images/weaving/interactivity.png"
                 alt="Feature Interface Screen"
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
-            <div className="col-span-1 grid-start-7 md:col-span-6 overflow-hidden rounded-lg bg-zinc-100 border border-black/10">
+            <div className="col-span-1 md:col-span-6 aspect-video overflow-hidden">
               <img
-                src=""
+                src="/images/weaving/mechanism.png"
                 alt="Feature Interface Screen"
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
         </section>
-
 
         <section className="mx-auto max-w-[1400px] grid grid-cols-1 md:grid-cols-12 gap-x-8 items-start py-[50px] my-[20px]">
           {/* H2 starts in column 2, spans 4 columns on desktop */}
@@ -132,6 +134,27 @@ export default function ProjectDetail() {
           </div>
         </section>
 
+
+        <section>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-12 md:gap-y-16">
+
+            {/* Horizontal Video (6 of 12 cols) */}
+            <div className="col-span-1 md:col-span-7 aspect-video overflow-hidden bg-zinc-100 border border-black/10">
+              <video
+                src="/images/weaving/videos/interaction.mp4"
+                poster="/images/weaving/videos/poster_interaction.png"
+                controls
+                playsInline
+                preload="metadata"
+                muted
+                autoPlay
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+
         <section className="mx-auto max-w-[1400px] grid grid-cols-1 md:grid-cols-12 gap-x-8 items-start py-[50px] my-[20px]">
           {/* H2 starts in column 2, spans 4 columns on desktop */}
           <h2 className="md:col-start-1 md:col-span-4 text-[30px] font-sans-serif font-[600] tracking-tighter text-[#0054a8]">
@@ -149,40 +172,46 @@ export default function ProjectDetail() {
           </div>
         </section>
 
-
-        <section>
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-12 md:gap-y-16">
-            <div className="col-span-1 grid-start-1 md:col-span-3 overflow-hidden rounded-lg bg-zinc-100 border border-black/10">
-              <img
-                src=""
-                alt="Feature Interface Screen"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="col-span-1 grid-start-5 md:col-span-3 overflow-hidden rounded-lg bg-zinc-100 border border-black/10">
-              <img
-                src=""
-                alt="Feature Interface Screen"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="col-span-1 grid-start-9 md:col-span-3 overflow-hidden rounded-lg bg-zinc-100 border border-black/10">
-              <img
-                src=""
-                alt="Feature Interface Screen"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-        </section>
-
         <h2 className="md:col-start-1 md:col-span-4 text-[30px] font-sans-serif font-[600] tracking-tighter text-[#0054a8]">
           Elements
         </h2>
-        <Carrousel></Carrousel>
+        <section>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-12 md:gap-y-16">
+            <div className="col-span-1 grid-start-1 md:col-span-3 overflow-hidden">
+              <img
+                src="images/weaving/board_details.jpg"
+                alt="Overview of game board"
+                className="w-full h-auto object-cover"
+              />
+              <p className='font-sans-serif text-md leading-tight'>Revolving game board that reveal chapters and meeting points</p>
+            </div>
+            <div className="col-span-1 grid-start-5 md:col-span-3 overflow-hidden">
+              <img
+                src="images/weaving/meeting_point.jpg"
+                alt="Two pawns at meeting point in board"
+                className="w-full h-auto object-cover"
+              />
+              <p className='font-sans-serif text-md leading-tight'>Two pawns, one for each character</p>
 
-
-
+            </div>
+            <div className="col-span-1 grid-start-9 md:col-span-3 overflow-hidden">
+              <img
+                src="images/weaving/noxias_assets.jpg"
+                alt="Game Assets for each character"
+                className="w-full h-auto object-cover"
+              />
+              <p className='font-sans-serif text-md leading-tight'>Materials for each character,</p>
+            </div>
+            <div className="col-span-1 grid-start-9 md:col-span-3 overflow-hidden">
+              <img
+                src="images/weaving/digital_game.jpg"
+                alt="Assets with digital game"
+                className="w-full h-auto object-cover"
+              />
+              <p className='font-sans-serif text-md leading-tight'>A digital game </p>
+            </div>
+          </div>
+        </section>
         <section className="mx-auto max-w-[1400px] grid grid-cols-1 md:grid-cols-12 gap-x-8 items-start py-[50px] my-[20px]">
           {/* H2 starts in column 2, spans 4 columns on desktop */}
           <h2 className="md:col-start-1 md:col-span-4 text-[30px] font-sans-serif font-[600] tracking-tighter text-[#0054a8]">
@@ -199,7 +228,94 @@ export default function ProjectDetail() {
             </p>
           </div>
         </section>
-        <FourColumnGridSection></FourColumnGridSection>
+
+        <section className="w-full max-w-[1400px] mx-auto py-12">
+          {/* 12-column grid: 1 col on mobile, 2 on tablet, 4 on desktop */}
+          <div className="grid grid-cols-1 sm:grid-cols-6 lg:grid-cols-12 gap-6">
+
+            {/* Video Card 1 */}
+            <div className="sm:col-span-3 lg:col-span-3 flex flex-col group">
+              <div className="w-full aspect-[9/16] overflow-hidden  bg-zinc-100 border border-black/10 mb-3">
+                <video
+                  src="images/weaving/videos/patrol-leader-demo.mp4"
+                  poster="images/weaving/videos/poster_patrol_leader.png"
+                  controls
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="space-y-1">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#0063C5]">
+                  Design
+                </span>
+                <p className='font-sans-serif text-md leading-tight'>Revolving game board that reveal chapters and meeting points</p>
+
+              </div>
+            </div>
+
+            {/* Video Card 2 */}
+            <div className="sm:col-span-3 lg:col-span-3 flex flex-col group">
+              <div className="w-full aspect-[9/16] overflow-hidden bg-zinc-100 border border-black/10 mb-3">
+                <video
+                  src="images/weaving/videos/secretary-demo.mp4"
+                  poster="images/weaving/videos/poster_secretary.png"
+                  controls
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="space-y-1">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#0063C5]">
+                  Technology
+                </span>
+                <p className='font-sans-serif text-md leading-tight'>Revolving game board that reveal chapters and meeting points</p>
+
+              </div>
+            </div>
+
+            {/* Video Card 3 */}
+            <div className="sm:col-span-3 lg:col-span-3 flex flex-col group">
+              <div className="w-full aspect-[9/16] overflow-hidden bg-zinc-100 border border-black/10 mb-3">
+                <video
+                  src="images/weaving/videos/video-demo-bff.mp4"
+                  poster="images/weaving/videos/poster_bff.png"
+                  controls
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="space-y-1">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#0063C5]">
+                  Culture
+                </span>
+                <p className='font-sans-serif text-md leading-tight'>Revolving game board that reveal chapters and meeting points</p>
+
+              </div>
+            </div>
+
+            {/* Video Card 4 */}
+            <div className="sm:col-span-3 lg:col-span-3 flex flex-col group">
+              <div className="w-full aspect-[9/16] overflow-hidden  bg-zinc-100 border border-black/10 mb-3">
+                <video
+                  src="images/weaving/videos/video-maverick.mp4"
+                  poster="images/weaving/videos/poster_maverick.png"
+                  controls
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="space-y-1">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#0063C5]">
+                  Innovation
+                </span>
+                <p className='font-sans-serif text-md leading-tight'>Revolving game board that reveal chapters and meeting points</p>
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+
       </main>
 
     </div>
