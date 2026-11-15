@@ -81,9 +81,9 @@ export default function Home() {
                 <p className="text-xl sm:text-2xl md:text-[36px] lg:text-[40px] text-[#0057AE] font-serif leading-snug md:leading-[1.15] tracking-tight md:tracking-[-1.5px]">
                   I am a designer from Argentina currently based in Italy,
                   studying an MSc. in Communication Design at Politecnico di
-                  Milano. Before that, I worked as a visual journalist at La
+                  Milano. Before, I was a visual journalist at La
                   Nación in Buenos Aires, where my work was recognized by
-                  organizations such as the Society for News Design and the
+                  organizations such as Society for News Design and
                   Sociedad Interamericana de Prensa.
                 </p>
 
@@ -97,9 +97,9 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="underline hover:opacity-70 transition-opacity duration-200"
                   >
-                    here
+                    here more about me and my work so far.
                   </a>{" "}
-                  more about me and the work I did.
+                  
                 </p>
 
                 <p className="text-xl sm:text-2xl md:text-[36px] lg:text-[40px] text-[#0057AE] font-serif leading-snug md:leading-[1.15] tracking-tight md:tracking-[-1.5px]">

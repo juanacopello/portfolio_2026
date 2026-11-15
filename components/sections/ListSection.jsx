@@ -94,9 +94,13 @@ export default function ProjectTable() {
     setCursorPos({ x: e.clientX, y: e.clientY });
   };
 
+  const handleRowClick = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section
-      className="px-6 md:px-12 py-8 md:py-12 mx-auto max-w-[1400px] relative"
+      className="px-6 py-8 md:py-12 mx-auto max-w-[1400px] relative"
       onMouseMove={handleMouseMove}
     >
       <h2 className="font-sans-serif text-2xl sm:text-3xl md:text-[35px] tracking-tighter font-[400] leading-tight border-b-2 pb-2 mb-8 md:mb-14">
@@ -128,9 +132,10 @@ export default function ProjectTable() {
           {PROJECTS_DATA.map((project) => (
             <tr
               key={project.id}
+              onClick={() => handleRowClick(project.url)}
               onMouseEnter={() => setHoveredImage(project.image)}
               onMouseLeave={() => setHoveredImage(null)}
-              className="relative hover:bg-[#dcfe52] active:bg-[#dcfe52] transition-colors cursor-pointer"
+              className="hover:bg-[#dcfe52] active:bg-[#dcfe52] transition-colors cursor-pointer"
             >
               {/* Date (Desktop only) */}
               <td className="hidden md:table-cell py-4 lg:py-5 pr-4 whitespace-nowrap font-sans-serif font-[100] text-base lg:text-[18px] tracking-tight">
@@ -158,9 +163,10 @@ export default function ProjectTable() {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-end text-black after:content-[''] after:absolute after:inset-0"
+                  onClick={(e) => e.stopPropagation()}
+                  className="inline-flex items-center justify-end text-black"
                 >
-                  <img src="/arrow.svg" alt="" className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                  <img src="/arrow.svg" alt={project.title} className="w-3.5 h-3.5 md:w-4 md:h-4" />
                 </Link>
               </td>
             </tr>

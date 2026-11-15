@@ -50,7 +50,7 @@ export default function ProjectSection() {
 
             </p>
 
-            <h3 className="text-[30px] md:text-2xl font-sans-serif leading-tight font-[350]">
+            <h3 className="text-[20px] md:text-[25px] md:text-2xl font-sans-serif leading-tight font-[350]">
 
               A game inspired by the complexity of nature
 
@@ -97,7 +97,7 @@ export default function ProjectSection() {
 
             </p>
 
-            <h3 className="text-[30px] md:text-2xl font-sans-serif leading-tight font-[350]">
+            <h3 className="text-[20px] md:text-[25px] md:text-2xl font-sans-serif leading-tight font-[350]">
 
               An article about the impact of climate change in cities
 
@@ -141,7 +141,7 @@ export default function ProjectSection() {
 
             </p>
 
-            <h3 className="text-[30px] md:text-2xl font-sans-serif leading-tight font-[350]">
+            <h3 className="text-[20px] md:text-[25px] md:text-2xl font-sans-serif leading-tight font-[350]">
 
               A quiz to reflect upon the distortion of prices
 
