@@ -1,61 +1,144 @@
+"use client"
 import Image from "next/image";
-import ProjectSection from '@/components/sections/ProjectSection';
-import ResumeSection from '@/components/sections/ResumeSection';
+import ProjectSection from '@/components/sections/WorkProjectSection';
+import ListSection from '@/components/sections/ListSection'
 import Footer from '@/components/sections/Footer';
+import Contact from '@/components/sections/Contact';
+import Opening from '@/components/ui/Opening';
+import { useState, useEffect, useRef } from "react";
 
 
 export default function Home() {
+const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+  const targetRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Show header when intro scrolls OUT of view
+        setIsHeaderVisible(!entry.isIntersecting);
+      },
+      {
+        threshold: 0, // Triggers as soon as the intro block leaves the viewport
+      }
+    );
+
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
   return (
-    <div className="bg-[var(--bg-color)] dark:bg-black">
-
-      <div className="h-screen flex flex-col">
-  <header className="w-full px-6 md:px-18 py-5 items-center grid md:grid-cols-12 gap-8 border-b border-black/70 bg-[#1c1c1c]">
-    <h1 className="col-span-6 md:col-span-4 text-[40px] font-sans-serif-2 text-[#ffffff] font-thin tracking-tight text-center md:text-left">Juana Copello</h1>
-  </header>
-
-  <section className="flex-1" style={{ backgroundColor: 'var(--bg-color)' }}>
-    <div className="max-w-[1500px] px-6 py-10 md:py-20 md:px-18 mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-x-[5rem]">
-  <div className="hidden md:block md:col-span-3">
-          <div className="aspect-[3/4] overflow-hidden bg-gray-100">
-            <img
-              src="/images/juana_3.png"
-              alt="me"
-              className="w-full h-full object-cover"
-            />
-          </div>
+    <div>
+     {/* Sticky Header with Name & Subtitle */}
+      <header
+        className={`w-full px-6 md:px-18 py-4 items-center grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 z-40 fixed top-0 left-0 bg-[var(--bg-color)] border-b border-black/10 transition-all duration-300 ${
+          isHeaderVisible
+            ? 'opacity-100 translate-y-0 pointer-events-auto'
+            : 'opacity-0 -translate-y-4 pointer-events-none'
+        }`}
+      >
+        <div className="col-span-1 md:col-span-6 flex flex-col md:flex-row md:items-baseline md:gap-3">
+          <h1 className="text-xl md:text-2xl font-sans font-[500] text-[#000000] tracking-tight">
+            Juana Copello
+          </h1>
+          <span className="text-xs md:text-sm text-[#070A19]/70 font-sans font-[400] tracking-tight">
+            Designer &amp; Creative Developer
+          </span>
         </div>
-        <div className="md:col-span-4 space-y-4">
-          <p className="text-[16px] md:text-[18px] leading-tight text-black/90 font-light font-sans-serif">
-            I am a freelance visual journalist and data visualization web developer from Argentina currently based in Italy, studying a Master in Science in Communication Design at Politecnico di Milano. Before that, I worked for five years at the Visual Storytelling and Graphics Team at La Nación in Buenos Aires. I was also an Adjunct Professor at the Universidad Torcuato Di Tella's Design School, where I taught introductory coding and data visualization classes.
-            <br /><br />I have provided data visualization consulting and development services to clients such as the European Council on Foreign Relations, the United Nations Population Fund, and Fundar. <br /><br />
-            This website is in English, but I am a native Spanish speaker and I also talk Italian.
-          </p>
-        </div>
+      </header>
 
-        {/* <div className="mt-4 md:mt-0 md:col-span-4 space-y-4">
-          <p className="text-[16px] md:text-[18px] leading-tight font-sans-serif font-light text-black/90">
-            I have provided data visualization consulting and development services to clients such as the European Council on Foreign Relations, the United Nations Population Fund, and Fundar. <br /><br />
-            This website is in English, but I am a native Spanish speaker and I also talk Italian.
-          </p>
-        </div> */}
+      <main
+      style={{
+        position: "relative",
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "flex-end",
+        justifyContent: "start",
+        overflow: "hidden",
+      }}
+    >
+      {/* Background p5 Canvas */}
+      <Opening />
 
-      
+      {/* Foreground Name Div */}
+      <div
+        style={{
+          position: "relative",
+          zIndex: 10,
+          color: "#ffffff",
+          height:"90%",
+          display:"flex",
+          flexDirection: "column",
+          justifyItems: "flex-end",
+          marginBottom: "50px",
+
+        }}
+      >
+         <p className="text-[16px] md:text-[51px] text-[#070A19] font-sans-serif font-[500] leading-none tracking-tighter pl-6 md:pl-18">
+          Juana Copello
+        </p>
+        <p className="text-[16px] md:text-[51px] text-[#070A19] font-sans-serif font-[500] leading-none tracking-tighter mb-10 pl-6 md:pl-18">
+          Designer &amp; Journalist
+        </p>
       </div>
-    </div>
-  </section>
-</div>
-
-     
-      <main className="w-full">
-
-        {/* Section 2: Projects or About */}
+    </main>
 
 
 
-        <ProjectSection />
-        <Footer />
-      </main>
+
+      <div ref={targetRef}>
+        {/* Bio Screen */}
+        <div className="min-h-screen flex flex-col">
+          <section className="flex-1" style={{ backgroundColor: "#fffdfa" }}>
+            <div className="max-w-[1500px] px-6 py-10 md:py-20 md:px-18 mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-20">
+                <div className="hidden md:block md:col-span-17">
+                  {/* Target Element Attached to ref */}
+
+                  <p className="text-[16px] md:text-[40px] text-[#0057AE] font-serif leading-none tracking-[-2px] mt-10 mb-10">Hola!</p>
+                  <p
+                    className="text-[16px] md:text-[40px] text-[#0057AE] font-serif leading-none tracking-[-2px] mt-10 mb-10"
+                  >
+                     
+                    I am a designer from Argentina currently based in Italy, studying an MSc. in Communication Design at Politecnico di Milano. Before that, I worked as a visual journalist at La Nación in Buenos Aires, where my work was recognized by organizations such as the Society for News Design and the Sociedad Interamericana de Prensa.
+                  </p>
+
+                  <p className="text-[16px] md:text-[40px] text-[#0057AE] font-serif leading-none tracking-[-2px] mt-10 mb-10">
+                    I have provided data visualization work to clients such as the European Council on Foreign Relations, the United Nations Population Fund and Fundar (Argentina). 
+  You can read{" "}
+  <a
+    href="http://www.linkedin.com/in/juanacopello"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline hover:opacity-70 transition-opacity duration-200"
+  >
+    here
+  </a>{" "}
+  more about me and the work I did.
+
+                    
+                  </p>
+
+                  <p className="text-[16px] md:text-[40px] text-[#0057AE] font-serif leading-none tracking-[-2px] mt-10 mb-10">
+                    This website is in English but I also speak Spanish and Italian, and I am learning German.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+
+        <main className="w-full">
+          <ProjectSection />
+          <ListSection />
+          {/* <Contact /> */}
+          <Footer />
+        </main>
+      </div>
+
     </div>
   );
 }

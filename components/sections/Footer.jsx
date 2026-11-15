@@ -1,9 +1,18 @@
 export default function Footer() {
   return (
-    <footer className="py-10 text-center bg-[var(--bg-color)] border-t border-black/70" >
-      <p className="text-black/80 font-sans-serif text-lg font-light">
-        &copy; {new Date().getFullYear()} Juana Copello
-      </p>
+    <footer className="py-10 border-2 border-t-[#0057ae]" >
+      <div className="max-w-[1350px] mx-auto">
+        <p className="font-sans-serif font-[500] text-[#0057ae] tracking-[-1px] text-[25px]">
+          Juana Copello
+        </p>
+         <p className="font-sans-serif font-[300] text-[#0057ae] tracking-[-1px] text-[18px]">
+         juanacopello.info@gmail.com
+        </p>
+        <p className="font-sans-serif font-[300] text-[#0057ae] tracking-[-1px] text-[18px]">
+          LinkedIn
+        </p>
+      </div>
+
     </footer>
   );
 }
