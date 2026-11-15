@@ -101,20 +101,20 @@ export default function ProjectDetail() {
 
         <section>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-x-5 gap-y-12 md:gap-y-16">
-            <div className="col-span-1 grid-start-1 md:col-span-6 overflow-hidden rounded-sm bg-zinc-100 border border-black/10">
+            <div className="col-span-1 grid-start-1 md:col-span-7 overflow-hidden rounded-sm bg-zinc-100 border border-black/10">
               <img
                 src="/images/inflacion/screen-1.jpg"
                 alt="Feature Interface Screen"
                 className="w-full h-auto object-cover"
               />
             </div>
-            <div className="col-span-1 grid-start-7 md:col-span-6 overflow-hidden rounded-lg bg-zinc-100 border border-black/10">
+            {/* <div className="col-span-1 grid-start-7 md:col-span-6 overflow-hidden rounded-lg bg-zinc-100 border border-black/10">
               <img
                 src=""
                 alt="Feature Interface Screen"
                 className="w-full h-auto object-cover"
               />
-            </div>
+            </div> */}
           </div>
         </section>
 
