@@ -118,10 +118,10 @@ export default function ProjectDetail() {
 
           <div className="lg:col-start-1 lg:col-span-6 space-y-4">
             <p className="text-base sm:text-lg md:text-[20px] text-black/90 font-[300] leading-tight font-sans-serif">
-              The game is set in a fantasy dystopian universe which is divided into two worlds. On one side, Calystrum is a technocratic world shaped by pollution, in which society is centered around a massive gold-built data center that governs how people live and work. Those who resist the system are marginalized to the city&apos;s outskirts, where communities remain connected to nature. On the other side, Noctichroma is a dark, bioluminescent dimension beneath Calystrum, connected to it through gold-pit portals. It&apos;s home to non-human beings who generate light, electrical, and chemical energy.
+              The game is set in a fantasy dystopian universe which is divided into two worlds. On one side, Calystrum is a technocratic world shaped by pollution, in which society is centered around a massive gold-built data center that governs how people live and work. Those who resist the system are marginalized to the city&apos;s outskirts, where communities remain connected to nature. On the other side, Noctichroma is a dark, bioluminescent dimension beneath Calystrum, connected to it through portals made out of gold, and it&apos;s home to non-human beings who generate light, electrical, and chemical energy.
             </p>
             <p className="text-base sm:text-lg md:text-[20px] text-black/90 font-[300] leading-tight font-sans-serif">
-              Noctichroma once existed in a symbiotic loop with Calystrum, exchanging energy and signals across the portals. But as Calystrum mines away the gold that anchors those portals, the connection weakens — less light and energy reach the underworld, and it begins to starve.
+              Noctichroma once existed in a symbiotic loop with Calystrum, exchanging energy and signals across the portals. But as Calystrum mines away the gold that anchors those portals and the connection weakens, affecting both worlds.
             </p>
           </div>
         </section>

@@ -1,323 +1,102 @@
 import Link from 'next/link';
-import Carrousel from '@/components/ui/Carrousel'
-import FourColumnGridSection from '@/components/ui/FourColumnGrid'
+import VideoPlayer from '@/components/ui/VideoPlayer'
 
 export default function ProjectDetail() {
   return (
-    <div className="relative min-h-screen bg-white text-black selection:bg-[#DCFE52]">
-
-      <header className="top-0 z-30 w-full border-b border-black/10 bg-white/95">
-        <div className="mx-auto max-w-[1400px] px-6 py-4 md:py-6">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-y-4 md:gap-x-8 items-start">
-            <div className="md:col-span-5 space-y-2">
-              <Link
-                href="/"
-                className="group inline-flex items-center gap-2 font-sans-serif text-xs font-light uppercase tracking-normal text-black no-underline hover:opacity-70 transition-all"
-              >
-                <span className="transition-transform group-hover:-translate-x-1">←</span>
-                Back to Home
-              </Link>
-
-            </div>
+    <div className="relative min-h-screen bg-white text-black selection:bg-[#DCFE52] overflow-x-hidden">
+      {/* Sticky Header */}
+      <header className="sticky top-0 z-30 w-full border-b border-black/10 bg-white/95 backdrop-blur-sm">
+        <div className="mx-auto max-w-[1400px] px-6 md:px-12 py-4 md:py-6">
+          <div className="flex items-center justify-between">
+            <Link
+              href="/"
+              className="group inline-flex items-center gap-2 font-sans-serif text-xs font-light uppercase tracking-normal text-black no-underline hover:opacity-70 transition-all"
+            >
+              <span className="transition-transform group-hover:-translate-x-1">←</span>
+              Back to Home
+            </Link>
           </div>
         </div>
       </header>
 
-      {/* --- MAIN EDITORIAL CONTENT (12 Columns) --- */}
-      <main className="mx-auto max-w-[1400px] px-6 py-12 md:py-16">
-        <p className="text-lg md:text-[20px] font-sans-serif font-light leading-tight tracking-tight text-black/60">
-          Weaving Truths
+      {/* --- MAIN EDITORIAL CONTENT --- */}
+      <main className="mx-auto max-w-[1400px] px-6 md:px-12 py-10 sm:py-12 md:py-16">
+        <p className="text-base sm:text-lg md:text-[20px] font-sans-serif font-light leading-tight tracking-tight text-black/60">
+          Museum of Modern Art's Department of Art and Sculpture
         </p>
-        <h1 className='font-serif text-[45px] font-bold tracking-tighter mt-[-10px]'>A game inspired by the complexity of nature</h1>
+        <h1 className="font-serif text-3xl sm:text-4xl md:text-[45px] font-bold tracking-tighter leading-tight mt-0 md:mt-[-10px]">
+          Showing with data how curatorial choices changed in history
+        </h1>
 
-        {/* Context (Spans 8 cols) */}
-        <section className='py-[50px]'>
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-8 font-sans-serif">
-            {/* Co-Authors: Row 1, Columns 1 to 4 */}
-            <div className="md:col-start-1 md:col-span-3">
-              <h4 className="text-[20px] font-[600] tracking-tighter text-[#0054a8] border-b-1">
-                Co-Authors
-              </h4>
-              <ul className="text-[17px] font-[500] text-black/80 font-sans-serif leading-tight pt-2 tracking-tight">
-                <li>Anfal Alzarraj</li>
-                <li>Isabela Andrade de Oliveira e Castro</li>
-                <li>Romchel M. Fuentes</li>
-                <li>Susana Pérez Alves</li>
-                <li>Alice Torzoni</li>
-              </ul>
-            </div>
+        {/* Metadata & Overview */}
+        <section className="py-8 sm:py-10 md:py-[50px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-8 font-sans-serif items-start">
 
-            {/* Year: Row 1, Columns 5 to 7 (beside Co-Authors) */}
-            <div className="md:col-start-5 md:col-span-3">
-              <h4 className="text-[20px] font-[600] tracking-tighter text-[#0054a8] border-b-1">
+            {/* Year */}
+            <div className="sm:col-span-1 lg:col-start-1 lg:col-span-3">
+              <h4 className="text-lg md:text-[20px] font-[600] tracking-tighter text-[#0054a8] border-b">
                 Year
               </h4>
-              <p className="text-[17px] font-[500] text-black/80 font-sans-serif leading-tight pt-2 tracking-tight">
+              <p className="text-base md:text-[17px] font-[500] text-black/80 font-sans-serif leading-tight pt-2 tracking-tight">
                 2026
               </p>
             </div>
 
-            {/* Paragraph: Row 2, Starts at Column 1 below the metadata */}
-            <p className="col-span-1 md:col-start-1 md:col-span-6 text-base md:text-[20px] text-black/90 font-light leading-snug">
-              <i>Weaving Truths</i> is a two-player hybrid game developed in the context of a Design Studio at Politecnico di Milano. The game combines a physical board and a digital mobile environment, set in a fantasy world that is losing its balance. Players take on the roles of two characters and explore the world separately, each encountering different characters who offer fragmented perspectives on why things are falling apart.
+            {/* Intro Summary */}
+            <p className="col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-6 text-base sm:text-lg md:text-[20px] text-black/90 font-light leading-tight">
+              Since 1930, the Museum of Modern Art’s Department of Painting and Sculpture has acquired over 4,000 works. As the museum’s oldest department, a historical dive into its acquisitions and curatorial choices shows how the museum has changed its vision of modern art and what is worthy of being shown in their facilities.
             </p>
 
-            <div className="col-span-1 md:col-span-7 w-full overflow-hidden">
-              <img
-                src="/images/weaving/overview.jpg"
-                alt="Weaving Truths Overview Image"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <p className="col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-6 text-base sm:text-lg md:text-[20px] text-black/90 font-light leading-tight">
+              In recent years, MoMA’s Department of Painting and Sculpture has expanded its acquisitions beyond traditional painting and sculpture to include more installations, textiles, and works on paper. Rather than focusing primarily on newly created contemporary works as it did in earlier decades, the Department now increasingly acquires older pieces with a longer gap between creation and acquisition, with most additions concentrated between March–June and September–December.
+            </p>
+
 
           </div>
-
-
         </section>
+<section className="py-8 sm:py-10 md:py-[50px]">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-8 font-sans-serif">
+    {/* Overview Image 1 */}
+    <div className="col-span-1 sm:col-span-1 lg:col-span-6 aspect-[3/4] w-full overflow-hidden border border-[#acadb2] bg-[#ffffff]">
+      <img
+        src="/images/dataviz/viz1.png"
+        alt="Data visualization overview"
+        className="w-full h-full object-contain"
+      />
+    </div>
 
+    {/* Overview Image 2 */}
+    <div className="col-span-1 sm:col-span-1 lg:col-span-6 aspect-[3/4] w-full overflow-hidden border border-[#acadb2] bg-[#ffffff]">
+      <img
+        src="/images/dataviz/mockup.jpg"
+        alt="Data visualization mockup"
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+</section>
 
-
-        <section className="mx-auto max-w-[1400px] grid grid-cols-1 md:grid-cols-12 gap-x-8 items-start py-[50px] my-[20px]">
-          {/* H2 starts in column 2, spans 4 columns on desktop */}
-          <h2 className="md:col-start-1 md:col-span-4 text-[30px] font-sans-serif font-[600] tracking-tighter text-[#0054a8]">
-            Context
+        {/* The Backstory */}
+        <section className="mx-auto max-w-[1400px] grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-4 items-start pt-8 pb-4 sm:py-10 md:py-[50px] my-2 md:my-[20px]">
+          <h2 className="lg:col-start-1 lg:col-span-8 text-2xl sm:text-[28px] md:text-[30px] font-sans-serif font-[600] tracking-tighter text-[#0054a8]">
+            Sources
           </h2>
 
-          {/* Paragraph container starts in column 6, spans 6 or 7 columns to fill the rest of the 12-column grid */}
-          <div className="md:col-start-1 md:col-span-6 space-y-4">
-            <p className="text-base md:text-[20px] text-black/90 font-[300] leading-tight font-sans-serif">
-              This project was created in the Complex Artifacts and System Design Studio at the Politecnico di Milano. In this lab we were tasked to develop a in interactive digital narrative to raise awareness and examine how climate change, socio-economic dynamics, and policy frameworks have an impact on the agrifood system.
-            </p>
-            <p className="text-base md:text-[20px] text-black/90 font-[300] leading-tight font-sans-serif">
-              After an initial research, we defined that our project would address pollinator decline. Therefore, our game aimed to foster a deeper understanding of the complexity of natural systems and the interconnected relationships that sustain them. Through play, participants discover that even the smallest actions can trigger cascading effects across the entire system.
-            </p>
-            <p className="text-base md:text-[20px] text-black/90 font-[300] leading-tight font-sans-serif">
-              The central message of the game is that changing one element of a system inevitably affects many others, much like the butterfly effect. As players interact with the game, they experience how individual decisions influence the balance of the ecosystem, revealing both visible and hidden consequences. In this way, the game also reflects contemporary ideas of uncertainty and interconnectedness, where cause and effect are often difficult to predict.
+          <div className="lg:col-start-1 lg:col-span-6 space-y-4">
+            <p className="text-base sm:text-lg md:text-[20px] text-black/90 font-[300] leading-tight font-sans-serif">
+              The data was taken from the Museum of Modern Art (MoMA) official dataset, periodically updated and publicly available on GitHub.  This research dataset contains more than 160,000 records, representing all of the works that have been accessioned into MoMA’s collection and cataloged in the database. It includes basic metadata for each work, including title, artist, date made, medium, dimensions, and date acquired by the Museum.
+
+              The list of curators and the creation of new departments come from MoMA’s official website. The list of departments was filtered to only show those that remain in existence today, excluding those that have been merged or closed.
+
             </p>
           </div>
         </section>
 
 
-        <section>
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-12 md:gap-y-16">
-            <div className="col-span-1 md:col-span-6 aspect-video overflow-hidden">
-              <img
-                src="/images/weaving/interactivity.png"
-                alt="Feature Interface Screen"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="col-span-1 md:col-span-6 aspect-video overflow-hidden">
-              <img
-                src="/images/weaving/mechanism.png"
-                alt="Feature Interface Screen"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-[1400px] grid grid-cols-1 md:grid-cols-12 gap-x-8 items-start py-[50px] my-[20px]">
-          {/* H2 starts in column 2, spans 4 columns on desktop */}
-          <h2 className="md:col-start-1 md:col-span-4 text-[30px] font-sans-serif font-[600] tracking-tighter text-[#0054a8]">
-            The backstory
-          </h2>
-
-          {/* Paragraph container starts in column 6, spans 6 or 7 columns to fill the rest of the 12-column grid */}
-          <div className="md:col-start-1 md:col-span-6 space-y-4">
-            <p className="text-base md:text-[20px] text-black/90 font-[300] leading-tight font-sans-serif">
-              The game is setted in a fantasy dystopian world which is divided in two worlds. On one side, there is Calystrum is a technocratic world shaped by pollution, in which society is centered around a massive gold-built data center that governs how people live and work. Those who resist the system are marginalized to the city's outskirts, in which there are communities that are connected to the nature. On the other side, Noctichroma is a dark, bioluminescent dimension beneath Calystrum, connected to it through gold-pit portals. It's home to non-human beings who generate light, electrical, and chemical energy.
-            </p>
-            <p className="text-base md:text-[20px] text-black/90 font-[300] leading-tight font-sans-serif">
-              Noctichroma once existed in a symbiotic loop with Calystrum, exchanging energy and signals across the portals. But as Calystrum mines away the gold that anchors those portals, the connection weakens — less light and energy reach the underworld, and it begins to starve.
-            </p>
-          </div>
-        </section>
 
 
-        <section>
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-12 md:gap-y-16">
-
-            {/* Horizontal Video (6 of 12 cols) */}
-            <div className="col-span-1 md:col-span-7 aspect-video overflow-hidden bg-zinc-100 border border-black/10">
-              <video
-                src="/images/weaving/videos/interaction.mp4"
-                poster="/images/weaving/videos/poster_interaction.png"
-                controls
-                playsInline
-                preload="metadata"
-                muted
-                autoPlay
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </section>
-
-
-        <section className="mx-auto max-w-[1400px] grid grid-cols-1 md:grid-cols-12 gap-x-8 items-start py-[50px] my-[20px]">
-          {/* H2 starts in column 2, spans 4 columns on desktop */}
-          <h2 className="md:col-start-1 md:col-span-4 text-[30px] font-sans-serif font-[600] tracking-tighter text-[#0054a8]">
-            The mechanics
-          </h2>
-
-          {/* Paragraph container starts in column 6, spans 6 or 7 columns to fill the rest of the 12-column grid */}
-          <div className="md:col-start-1 md:col-span-6 space-y-4">
-            <p className="text-base md:text-[20px] text-black/90 font-[300] leading-tight font-sans-serif">
-              For this prototype, I developed the four minigames featured in the digital environment, adapting the visual language established by our team’s designer. The mini games were added to to add a level of challenge for the players while also complementing the overall narrative.
-            </p>
-            <p className="text-base md:text-[20px] text-black/90 font-[300] leading-tight font-sans-serif">
-              To complement the narrative and add a level of challenge for the pla, these puzzles offer tactile, individual challenges directly tied to earlier character interactions. We decided to leverage the mobile environment to build mechanics around device-native hardware, using p5.js alongside ml5.js for real-time camera hand-tracking, and p5-phone to tap into gyroscope and sensor data.
-            </p>
-          </div>
-        </section>
-
-        <h2 className="md:col-start-1 md:col-span-4 text-[30px] font-sans-serif font-[600] tracking-tighter text-[#0054a8]">
-          Elements
-        </h2>
-        <section>
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-12 md:gap-y-16">
-            <div className="col-span-1 grid-start-1 md:col-span-3 overflow-hidden">
-              <img
-                src="images/weaving/board_details.jpg"
-                alt="Overview of game board"
-                className="w-full h-auto object-cover"
-              />
-              <p className='font-sans-serif text-md leading-tight'>Revolving game board that reveal chapters and meeting points</p>
-            </div>
-            <div className="col-span-1 grid-start-5 md:col-span-3 overflow-hidden">
-              <img
-                src="images/weaving/meeting_point.jpg"
-                alt="Two pawns at meeting point in board"
-                className="w-full h-auto object-cover"
-              />
-              <p className='font-sans-serif text-md leading-tight'>Two pawns, one for each character</p>
-
-            </div>
-            <div className="col-span-1 grid-start-9 md:col-span-3 overflow-hidden">
-              <img
-                src="images/weaving/noxias_assets.jpg"
-                alt="Game Assets for each character"
-                className="w-full h-auto object-cover"
-              />
-              <p className='font-sans-serif text-md leading-tight'>Materials for each character,</p>
-            </div>
-            <div className="col-span-1 grid-start-9 md:col-span-3 overflow-hidden">
-              <img
-                src="images/weaving/digital_game.jpg"
-                alt="Assets with digital game"
-                className="w-full h-auto object-cover"
-              />
-              <p className='font-sans-serif text-md leading-tight'>A digital game </p>
-            </div>
-          </div>
-        </section>
-        <section className="mx-auto max-w-[1400px] grid grid-cols-1 md:grid-cols-12 gap-x-8 items-start py-[50px] my-[20px]">
-          {/* H2 starts in column 2, spans 4 columns on desktop */}
-          <h2 className="md:col-start-1 md:col-span-4 text-[30px] font-sans-serif font-[600] tracking-tighter text-[#0054a8]">
-            My role
-          </h2>
-
-          {/* Paragraph container starts in column 6, spans 6 or 7 columns to fill the rest of the 12-column grid */}
-          <div className="md:col-start-1 md:col-span-6 space-y-4">
-            <p className="text-base md:text-[20px] text-black/90 font-[300] leading-tight font-sans-serif">
-              For this prototype, I developed the four minigames featured in the digital environment, adapting the visual language established by our team’s designer. The mini games were added to to add a level of challenge for the players while also complementing the overall narrative.
-            </p>
-            <p className="text-base md:text-[20px] text-black/90 font-[300] leading-tight font-sans-serif">
-              To complement the narrative and add a level of challenge for the pla, these puzzles offer tactile, individual challenges directly tied to earlier character interactions. We decided to leverage the mobile environment to build mechanics around device-native hardware, using p5.js alongside ml5.js for real-time camera hand-tracking, and p5-phone to tap into gyroscope and sensor data.
-            </p>
-          </div>
-        </section>
-
-        <section className="w-full max-w-[1400px] mx-auto py-12">
-          {/* 12-column grid: 1 col on mobile, 2 on tablet, 4 on desktop */}
-          <div className="grid grid-cols-1 sm:grid-cols-6 lg:grid-cols-12 gap-6">
-
-            {/* Video Card 1 */}
-            <div className="sm:col-span-3 lg:col-span-3 flex flex-col group">
-              <div className="w-full aspect-[9/16] overflow-hidden  bg-zinc-100 border border-black/10 mb-3">
-                <video
-                  src="images/weaving/videos/patrol-leader-demo.mp4"
-                  poster="images/weaving/videos/poster_patrol_leader.png"
-                  controls
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="space-y-1">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#0063C5]">
-                  Design
-                </span>
-                <p className='font-sans-serif text-md leading-tight'>Revolving game board that reveal chapters and meeting points</p>
-
-              </div>
-            </div>
-
-            {/* Video Card 2 */}
-            <div className="sm:col-span-3 lg:col-span-3 flex flex-col group">
-              <div className="w-full aspect-[9/16] overflow-hidden bg-zinc-100 border border-black/10 mb-3">
-                <video
-                  src="images/weaving/videos/secretary-demo.mp4"
-                  poster="images/weaving/videos/poster_secretary.png"
-                  controls
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="space-y-1">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#0063C5]">
-                  Technology
-                </span>
-                <p className='font-sans-serif text-md leading-tight'>Revolving game board that reveal chapters and meeting points</p>
-
-              </div>
-            </div>
-
-            {/* Video Card 3 */}
-            <div className="sm:col-span-3 lg:col-span-3 flex flex-col group">
-              <div className="w-full aspect-[9/16] overflow-hidden bg-zinc-100 border border-black/10 mb-3">
-                <video
-                  src="images/weaving/videos/video-demo-bff.mp4"
-                  poster="images/weaving/videos/poster_bff.png"
-                  controls
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="space-y-1">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#0063C5]">
-                  Culture
-                </span>
-                <p className='font-sans-serif text-md leading-tight'>Revolving game board that reveal chapters and meeting points</p>
-
-              </div>
-            </div>
-
-            {/* Video Card 4 */}
-            <div className="sm:col-span-3 lg:col-span-3 flex flex-col group">
-              <div className="w-full aspect-[9/16] overflow-hidden  bg-zinc-100 border border-black/10 mb-3">
-                <video
-                  src="images/weaving/videos/video-maverick.mp4"
-                  poster="images/weaving/videos/poster_maverick.png"
-                  controls
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="space-y-1">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#0063C5]">
-                  Innovation
-                </span>
-                <p className='font-sans-serif text-md leading-tight'>Revolving game board that reveal chapters and meeting points</p>
-
-              </div>
-            </div>
-
-          </div>
-        </section>
 
       </main>
-
     </div>
   );
 }

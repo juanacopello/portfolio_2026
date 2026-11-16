@@ -63,7 +63,7 @@ export default function ProjectDetail() {
             </div>
 
             {/* Intro Summary */}
-            <p className="col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-6 text-base sm:text-lg md:text-[20px] text-black/90 font-light leading-snug">
+            <p className="col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-6 text-base sm:text-lg md:text-[20px] text-black/90 font-light leading-tight">
               <i>Urban Heat Islands: The Corners in Buenos Aires where Temperature is Hell</i> is an interactive visual story piece published by La Nación that investigates how climate change and urban planning drive extreme ground temperatures across Buenos Aires. Combining satellite analysis with street-level mapping, the project lets readers explore temperature disparities in their own neighborhoods while discovering the health impacts and potential urban solutions to this phenomenon.
             </p>
 

@@ -71,7 +71,7 @@ export default function ProjectDetail() {
             </div>
 
             {/* Intro Summary */}
-            <p className="col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-6 text-base sm:text-lg md:text-[20px] text-black/90 font-light leading-snug">
+            <p className="col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-6 text-base sm:text-lg md:text-[20px] text-black/90 font-light leading-tight">
               <i>Do You Know How Much Gasoline and Milk Cost? Test your Notion of Prices in Times of Rampant Inflation</i> is an interactive news quiz developed at La Nación to reflect on how Argentina’s 94.2% annual inflation distorted people’s perception of everyday prices. Readers are challenged to guess the real cost of common goods and services—from milk and gasoline to plane tickets—before receiving immediate feedback on how close their estimates were, alongside historical price charts explaining the trends behind each item.
             </p>
 
