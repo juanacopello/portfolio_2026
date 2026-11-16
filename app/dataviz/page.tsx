@@ -44,6 +44,7 @@ export default function ProjectDetail() {
 
             {/* Intro Summary */}
             <p className="col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-6 text-base sm:text-lg md:text-[20px] text-black/90 font-light leading-tight">
+              This visualization was developed during the Final Synthesis Design Studio at Politecnico di Milano.<br /><br />
               Since 1930, the Museum of Modern Art’s Department of Painting and Sculpture has acquired over 4,000 works. As the museum’s oldest department, a historical dive into its acquisitions and curatorial choices shows how the museum has changed its vision of modern art and what is worthy of being shown in their facilities.
             </p>
 

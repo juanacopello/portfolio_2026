@@ -57,7 +57,7 @@ export default function ProjectDetail() {
 
             {/* Intro Summary */}
             <p className="col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-6 text-base sm:text-lg md:text-[20px] text-black/90 font-light leading-snug">
-              <i>Weaving Truths</i> is a two-player hybrid game developed in the context of a Design Studio at Politecnico di Milano. The game combines a physical board and a digital mobile environment, set in a fantasy world that is losing its balance. Players take on the roles of two characters and explore the world separately, each encountering different characters who offer fragmented perspectives on why things are falling apart.
+              <i>Weaving Truths</i> is a two-player hybrid game developed in the context of Politecnico di Milano's Complex Artifacts and System Design Studio. The game combines a physical board and a digital mobile environment, set in a fantasy world that is losing its balance. Players take on the roles of two characters and explore the world separately, each encountering different characters who offer fragmented perspectives on why things are falling apart.
             </p>
 
             {/* Overview Image */}
