@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import VideoPlayer from '@/components/ui/VideoPlayer'
 
 export default function ProjectDetail() {
   return (
@@ -71,7 +72,7 @@ export default function ProjectDetail() {
         </section>
 
         {/* Context */}
-        <section className="mx-auto max-w-[1400px] grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-4 items-start py-8 sm:py-10 md:py-[50px] my-2 md:my-[20px]">
+        <section className="mx-auto max-w-[1400px] grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-4 items-start pt-8 pb-4 sm:py-10 md:py-[50px] my-2 md:my-[20px]">
           <h2 className="lg:col-start-1 lg:col-span-8 text-2xl sm:text-[28px] md:text-[30px] font-sans-serif font-[600] tracking-tighter text-[#0054a8]">
             Context
           </h2>
@@ -110,7 +111,7 @@ export default function ProjectDetail() {
         </section>
 
         {/* The Backstory */}
-        <section className="mx-auto max-w-[1400px] grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-4 items-start py-8 sm:py-10 md:py-[50px] my-2 md:my-[20px]">
+        <section className="mx-auto max-w-[1400px] grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-4 items-start pt-8 pb-4 sm:py-10 md:py-[50px] my-2 md:my-[20px]">
           <h2 className="lg:col-start-1 lg:col-span-8 text-2xl sm:text-[28px] md:text-[30px] font-sans-serif font-[600] tracking-tighter text-[#0054a8]">
             The backstory
           </h2>
@@ -129,98 +130,81 @@ export default function ProjectDetail() {
         <section>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
             <div className="col-span-1 md:col-span-10 lg:col-span-7 aspect-video overflow-hidden bg-zinc-100 border border-black/10">
-              <video
+              <VideoPlayer
                 src="/images/weaving/videos/interaction.mp4"
                 poster="/images/weaving/videos/poster_interaction.png"
-                controls
-                playsInline
-                preload="metadata"
-                muted
                 autoPlay
-                className="w-full h-full object-cover"
+                muted
+                loop
+                className="col-span-1 md:col-span-10 lg:col-span-7 aspect-video"
               />
             </div>
           </div>
         </section>
 
         {/* The Mechanics */}
-        <section className="mx-auto max-w-[1400px] grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-4 items-start py-8 sm:py-10 md:py-[50px] my-2 md:my-[20px]">
-          <h2 className="lg:col-start-1 lg:col-span-8 text-2xl sm:text-[28px] md:text-[30px] font-sans-serif font-[600] tracking-tighter text-[#0054a8]">
-            The mechanics
-          </h2>
+        <section className="mx-auto max-w-[1400px] grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-4 items-start pt-8 pb-4 sm:py-10 md:py-[50px] my-2 md:my-[20px]">
+
 
           <div className="lg:col-start-1 lg:col-span-6 space-y-4">
+
             <p className="text-base sm:text-lg md:text-[20px] text-black/90 font-[300] leading-tight font-sans-serif">
-              For this prototype, I developed the four minigames featured in the digital environment, adapting the visual language established by our team’s designer. The minigames were added to create a level of challenge for the players while also complementing the overall narrative.
-            </p>
-            <p className="text-base sm:text-lg md:text-[20px] text-black/90 font-[300] leading-tight font-sans-serif">
-              To complement the narrative and add a level of challenge for the players, these puzzles offer tactile, individual challenges directly tied to earlier character interactions. We decided to leverage the mobile environment to build mechanics around device-native hardware, using p5.js alongside ml5.js for real-time camera hand-tracking, and p5-phone to tap into gyroscope and sensor data.
+              The project combines a
+              diverse set of physical artifacts with a web mobile game. In this way, we can
+              combine the best of both mediums: while the digital medium is more fluid
+              and can easily adapt itself based on user feedback, the physical medium
+              allows for a better multiplayer puzzle experience, since players can see and
+              exchange information by speaking or showing it to each other, with no
+              screens in between them.
             </p>
           </div>
         </section>
 
         {/* Elements */}
         <section className="py-4 sm:py-6">
-          <h2 className="text-2xl sm:text-[28px] md:text-[30px] font-sans-serif font-[600] tracking-tighter text-[#0054a8] mb-6">
-            Elements
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-6 lg:grid-cols-12 gap-x-6 lg:gap-x-8 gap-y-8 md:gap-y-12">
-            <div className="col-span-1 sm:col-span-3 lg:col-span-3 overflow-hidden">
-              <div className="w-full aspect-[4/3] overflow-hidden bg-zinc-100 mb-2">
+          <figure className="space-y-3">
+            <div className="grid grid-cols-1 sm:grid-cols-6 lg:grid-cols-12 gap-x-6 lg:gap-x-8 gap-y-6">
+              <div className="col-span-1 sm:col-span-3 md:col-span-3 overflow-hidden bg-zinc-100">
                 <img
                   src="/images/weaving/board_details.jpg"
                   alt="Overview of game board"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="font-sans-serif text-sm sm:text-base leading-tight">
-                Revolving game board that reveals chapters and meeting points
-              </p>
-            </div>
 
-            <div className="col-span-1 sm:col-span-3 lg:col-span-3 overflow-hidden">
-              <div className="w-full aspect-[4/3] overflow-hidden bg-zinc-100 mb-2">
+              <div className="col-span-1 sm:col-span-3 md:col-span-3 overflow-hidden bg-zinc-100">
                 <img
                   src="/images/weaving/meeting_point.jpg"
                   alt="Two pawns at meeting point in board"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="font-sans-serif text-sm sm:text-base leading-tight">
-                Two pawns, one for each character
-              </p>
-            </div>
 
-            <div className="col-span-1 sm:col-span-3 lg:col-span-3 overflow-hidden">
-              <div className="w-full aspect-[4/3] overflow-hidden bg-zinc-100 mb-2">
+              <div className="col-span-1 sm:col-span-3 md:col-span-3 overflow-hidden bg-zinc-100">
                 <img
                   src="/images/weaving/noxias_assets.jpg"
-                  alt="Game Assets for each character"
+                  alt="Game assets for each character"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="font-sans-serif text-sm sm:text-base leading-tight">
-                Materials for each character
-              </p>
-            </div>
 
-            <div className="col-span-1 sm:col-span-3 lg:col-span-3 overflow-hidden">
-              <div className="w-full aspect-[4/3] overflow-hidden bg-zinc-100 mb-2">
+              <div className="col-span-1 sm:col-span-3 md:col-span-3  overflow-hidden bg-zinc-100">
                 <img
                   src="/images/weaving/digital_game.jpg"
                   alt="Assets with digital game"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="font-sans-serif text-sm sm:text-base leading-tight">
-                A digital game
-              </p>
             </div>
-          </div>
+
+            <figcaption className="font-sans-serif text-sm sm:text-base leading-tight text-black/80">
+              The project works through a set of physical and digital game components, such as a revolving board, character pawns, documents, and a mobile digital game.
+            </figcaption>
+          </figure>
         </section>
 
         {/* My Role */}
-        <section className="mx-auto max-w-[1400px] grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-4 items-start py-8 sm:py-10 md:py-[50px] my-2 md:my-[20px]">
+        <section className="mx-auto max-w-[1400px] grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-4 items-start pt-8 pb-4 sm:py-10 md:py-[50px] my-2 md:my-[20px]">
           <h2 className="lg:col-start-1 lg:col-span-8 text-2xl sm:text-[28px] md:text-[30px] font-sans-serif font-[600] tracking-tighter text-[#0054a8]">
             My role
           </h2>
@@ -240,96 +224,59 @@ export default function ProjectDetail() {
           <div className="grid grid-cols-1 sm:grid-cols-6 lg:grid-cols-12 gap-8 sm:gap-6">
 
             {/* Video Card 1 */}
-            <div className="sm:col-span-3 lg:col-span-3 flex flex-col group max-w-[340px] mx-auto w-full sm:max-w-none">
-              <div className="w-full aspect-[9/16] overflow-hidden bg-zinc-100 border border-black/10 mb-3">
-                <video
-                  src="/images/weaving/videos/patrol-leader-demo.mp4"
-                  poster="/images/weaving/videos/poster_patrol_leader.png"
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="space-y-1">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#0063C5]">
-                  Design
-                </span>
-                <p className="font-sans-serif text-sm sm:text-base leading-tight">
-                  Revolving game board that reveals chapters and meeting points
-                </p>
-              </div>
+            <div className="sm:col-span-3 lg:col-span-3 flex flex-col max-w-[340px] mx-auto w-full sm:max-w-none">
+              <VideoPlayer
+                src="/images/weaving/videos/patrol-leader-demo.mp4"
+                poster="/images/weaving/videos/poster_patrol_leader.png"
+                autoPlay={false}
+                muted={false}
+                loop={true}
+                className="w-full aspect-[9/16] mb-3"
+              />
+
             </div>
 
             {/* Video Card 2 */}
-            <div className="sm:col-span-3 lg:col-span-3 flex flex-col group max-w-[340px] mx-auto w-full sm:max-w-none">
-              <div className="w-full aspect-[9/16] overflow-hidden bg-zinc-100 border border-black/10 mb-3">
-                <video
-                  src="/images/weaving/videos/secretary-demo.mp4"
-                  poster="/images/weaving/videos/poster_secretary.png"
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="space-y-1">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#0063C5]">
-                  Technology
-                </span>
-                <p className="font-sans-serif text-sm sm:text-base leading-tight">
-                  Revolving game board that reveals chapters and meeting points
-                </p>
-              </div>
+            <div className="sm:col-span-3 lg:col-span-3 flex flex-col max-w-[340px] mx-auto w-full sm:max-w-none">
+              <VideoPlayer
+                src="/images/weaving/videos/secretary-demo.mp4"
+                poster="/images/weaving/videos/poster_secretary.png"
+                autoPlay={false}
+                muted={false}
+                loop={true}
+                className="w-full aspect-[9/16] mb-3"
+              />
+
             </div>
 
             {/* Video Card 3 */}
-            <div className="sm:col-span-3 lg:col-span-3 flex flex-col group max-w-[340px] mx-auto w-full sm:max-w-none">
-              <div className="w-full aspect-[9/16] overflow-hidden bg-zinc-100 border border-black/10 mb-3">
-                <video
-                  src="/images/weaving/videos/video-demo-bff.mp4"
-                  poster="/images/weaving/videos/poster_bff.png"
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="space-y-1">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#0063C5]">
-                  Culture
-                </span>
-                <p className="font-sans-serif text-sm sm:text-base leading-tight">
-                  Revolving game board that reveals chapters and meeting points
-                </p>
-              </div>
+            <div className="sm:col-span-3 lg:col-span-3 flex flex-col max-w-[340px] mx-auto w-full sm:max-w-none">
+              <VideoPlayer
+                src="/images/weaving/videos/video-demo-bff.mp4"
+                poster="/images/weaving/videos/poster_bff.png"
+                autoPlay={false}
+                muted={false}
+                loop={true}
+                className="w-full aspect-[9/16] mb-3"
+              />
+
             </div>
 
             {/* Video Card 4 */}
-            <div className="sm:col-span-3 lg:col-span-3 flex flex-col group max-w-[340px] mx-auto w-full sm:max-w-none">
-              <div className="w-full aspect-[9/16] overflow-hidden bg-zinc-100 border border-black/10 mb-3">
-                <video
-                  src="/images/weaving/videos/video-maverick.mp4"
-                  poster="/images/weaving/videos/poster_maverick.png"
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="space-y-1">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#0063C5]">
-                  Innovation
-                </span>
-                <p className="font-sans-serif text-sm sm:text-base leading-tight">
-                  Revolving game board that reveals chapters and meeting points
-                </p>
-              </div>
+            <div className="sm:col-span-3 lg:col-span-3 flex flex-col max-w-[340px] mx-auto w-full sm:max-w-none">
+              <VideoPlayer
+                src="/images/weaving/videos/video-maverick.mp4"
+                poster="/images/weaving/videos/poster_maverick.png"
+                autoPlay={false}
+                muted={false}
+                loop={true}
+                className="w-full aspect-[9/16] mb-3"
+              />
+
             </div>
 
           </div>
         </section>
-
       </main>
     </div>
   );

@@ -59,7 +59,7 @@ export default function ProjectDetail() {
             </div>
 
             {/* CTA Button */}
-            <div className="sm:col-span-2 lg:col-start-10 lg:col-span-3 lg:flex lg:justify-end">
+            <div className="sm:col-span-2 lg:col-start-8 lg:col-span-3 lg:flex lg:justify-end">
               <a
                 href="https://www.lanacion.com.ar/economia/sabes-cuanto-vale-la-leche-y-la-nafta-testea-tu-nocion-de-los-precios-en-tiempos-de-inflacion-nid07092022/"
                 target="_blank"
