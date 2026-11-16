@@ -1,12 +1,6 @@
 import localFont from 'next/font/local';
 import './globals.css';
-
-// 1. Configure Canela (relative to this file, e.g., if fonts are in /public/fonts)
-// const canela = localFont({
-//   src: '../public/fonts/serif/Canela-Light-Trial.otf',
-//   variable: '--font-canela',
-//   display: 'swap',
-// });
+import type { Metadata } from 'next';
 
 // 2. Configure Archivo
 const archivo = localFont({
@@ -14,6 +8,14 @@ const archivo = localFont({
   variable: '--font-archivo',
   display: 'swap',
 });
+
+export const metadata: Metadata = {
+  title: {
+    default: "Hola! I'm Juana :)",
+    template: '%s | Juana Copello',
+  },
+  description: 'Portfolio of Juana Copello',
+};
 
 export default function RootLayout({
   children,
